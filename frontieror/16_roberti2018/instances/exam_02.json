@@ -1,0 +1,93 @@
+{
+ "Q1": 100,
+ "Q2": 80,
+ "T1": 2,
+ "T2": 2,
+ "customers_demand": [
+  26,
+  15,
+  22,
+  21,
+  22,
+  17
+ ],
+ "customers_group": [
+  0,
+  1,
+  1,
+  1,
+  1,
+  0
+ ],
+ "customers_id": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
+ ],
+ "customers_x": [
+  363,
+  -670,
+  -644,
+  -664,
+  -645,
+  364
+ ],
+ "customers_y": [
+  103,
+  402,
+  442,
+  429,
+  410,
+  89
+ ],
+ "depot_id": 0,
+ "depot_x": -19,
+ "depot_y": 222,
+ "groups_customer_ids": [
+  [
+   3,
+   8
+  ],
+  [
+   6,
+   5,
+   7,
+   4
+  ]
+ ],
+ "groups_group_id": [
+  0,
+  1
+ ],
+ "instance_type": "分组配送中的远隔卫星与拆分运输取舍",
+ "num_customers": 6,
+ "num_groups": 2,
+ "num_satellites": 2,
+ "satellites_capacity": [
+  44,
+  84
+ ],
+ "satellites_handling_cost": [
+  0.353,
+  0.579
+ ],
+ "satellites_id": [
+  1,
+  2
+ ],
+ "satellites_max_vehicles": [
+  1,
+  1
+ ],
+ "satellites_x": [
+  373,
+  -657
+ ],
+ "satellites_y": [
+  111,
+  418
+ ]
+}

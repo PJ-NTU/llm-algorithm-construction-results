@@ -1,0 +1,77 @@
+{
+ "schema_fields": [
+  "capacities",
+  "cost_matrix",
+  "gap_type",
+  "instance_name",
+  "num_binary_variables",
+  "num_jobs",
+  "num_machines",
+  "resource_matrix"
+ ],
+ "input_schema": "{\"instance_name\": str, \"num_machines\": int, \"num_jobs\": int, \"cost_matrix\": [[int, ...], ...], \"resource_matrix\": [[int, ...], ...], \"capacities\": [int, ...], \"num_binary_variables\": int, \"gap_type\": str}",
+ "smoke_instance_example": {
+  "instance_name": "GAP_Smoke_Test",
+  "num_machines": 3,
+  "num_jobs": 6,
+  "cost_matrix": [
+   [
+    21,
+    39,
+    50,
+    43,
+    14,
+    24
+   ],
+   [
+    11,
+    9,
+    48,
+    26,
+    35,
+    40
+   ],
+   [
+    11,
+    27,
+    32,
+    25,
+    44,
+    45
+   ]
+  ],
+  "resource_matrix": [
+   [
+    16,
+    16,
+    10,
+    14,
+    18,
+    17
+   ],
+   [
+    16,
+    14,
+    17,
+    15,
+    19,
+    13
+   ],
+   [
+    18,
+    12,
+    14,
+    12,
+    11,
+    19
+   ]
+  ],
+  "capacities": [
+   48,
+   48,
+   45
+  ],
+  "num_binary_variables": 18,
+  "gap_type": "D"
+ }
+}

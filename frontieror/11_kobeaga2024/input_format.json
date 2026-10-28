@@ -1,0 +1,7 @@
+{
+ "n_locations": "int, total number of locations, including the depot; locations are numbered 0 to n_locations-1.",
+ "depot_index": "int, location number of the depot, in the range 0 to n_locations-1.",
+ "scores": "list[float], length n_locations; scores[i] is the positive score of location i, including the depot score.",
+ "distance_matrix": "list[list[float]], symmetric distance matrix of shape [n_locations][n_locations]; distance_matrix[i][j] is the travel distance of the direct undirected link between locations i and j, in the same unit as distance_budget; positive when i≠j, with diagonal entries distance_matrix[i][i]=0.",
+ "distance_budget": "float, maximum total travel distance allowed for the single round-trip route, in the same unit as the distances in distance_matrix."
+}

@@ -1,0 +1,34 @@
+{
+ "schema_fields": [
+  "n",
+  "n_machines",
+  "proc"
+ ],
+ "input_schema": "{\"n\": int, \"n_machines\": int, \"proc\": [[float, ...], ...]}",
+ "smoke_instance_example": {
+  "n": 4,
+  "n_machines": 3,
+  "proc": [
+   [
+    17.0,
+    18.0,
+    6.0
+   ],
+   [
+    13.0,
+    20.0,
+    17.0
+   ],
+   [
+    14.0,
+    20.0,
+    16.0
+   ],
+   [
+    11.0,
+    9.0,
+    14.0
+   ]
+  ]
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "schema_fields": [
+  "R",
+  "cx",
+  "cy",
+  "n",
+  "radii"
+ ],
+ "input_schema": "{\"n\": int, \"cx\": float, \"cy\": float, \"R\": float, \"radii\": [float, ...]}",
+ "smoke_instance_example": {
+  "n": 4,
+  "cx": 0.0,
+  "cy": 0.0,
+  "R": 10.0,
+  "radii": [
+   1.0,
+   2.0,
+   2.0,
+   3.0
+  ]
+ }
+}

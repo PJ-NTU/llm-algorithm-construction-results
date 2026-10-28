@@ -1,0 +1,17 @@
+{
+ "num_periods": "int, number of periods H, must be at least 1; all period axes use indices t=0,…,H-1, corresponding to periods 1,…,H in the mathematical model.",
+ "num_customers": "int, number of customers N, must be at least 1; customer-axis index c=0,…,N-1 corresponds to customer node number c+1 in the routes.",
+ "num_vehicles": "int, number of homogeneous vehicles M available in each period, must be at least 1; the vehicle axis uses indices k=0,…,M-1, and all vehicles have the same capacity.",
+ "num_scenarios": "int, number of demand scenarios S, must be at least 1; S=1 denotes deterministic demand.",
+ "scenario_probabilities": "list[float], length S; scenario_probabilities[s] is the positive probability of scenario s, and all elements must sum to 1.",
+ "demand_scenarios": "list[list[list[float]]], shape [S][H][N], in units of product quantity; demand_scenarios[s][t][c] is the nonnegative demand of customer node c+1 in period t under scenario s. Two scenarios whose demand prefixes up to t are identical are regarded as having the same observed history.",
+ "initial_inventories": "list[float], length N+1, in units of product quantity; index 0 is the plant and index i=1,…,N is customer node i, giving the known inventory at the start of the planning horizon.",
+ "inventory_capacities": "list[float], length N+1, in units of product quantity; index 0 is the plant's maximum inventory capacity and index i=1,…,N is the maximum inventory capacity of customer node i. Each initial inventory must lie between 0 and the corresponding capacity.",
+ "production_capacity": "float, maximum production quantity of the plant in each period, in units of product quantity per period, must be nonnegative.",
+ "vehicle_capacity": "float, maximum total load of each homogeneous vehicle in each period, in units of product quantity, must be positive.",
+ "setup_cost": "float, fixed cost incurred by performing a production setup in any period, in units of currency per setup period, must be nonnegative.",
+ "unit_production_cost": "float, cost of producing one unit of product, in units of currency per product unit, must be nonnegative.",
+ "holding_costs": "list[float], length N+1, in units of currency/(product unit·period); index 0 is the plant's unit end-of-period inventory holding cost and index i=1,…,N is the unit end-of-period inventory holding cost of customer node i.",
+ "unmet_demand_penalties": "list[float], length N, in units of currency per unmet product unit; unmet_demand_penalties[c] is the penalty cost per unit of unmet demand in the current period for customer node c+1.",
+ "transportation_costs": "list[list[float]], shape [N+1][N+1], in units of currency per vehicle arc; transportation_costs[i][j] is the cost for one vehicle to travel directly from location i to location j. Index 0 is the plant and 1,…,N are customers; the matrix must be nonnegative, symmetric, and have a zero diagonal."
+}

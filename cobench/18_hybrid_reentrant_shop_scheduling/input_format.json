@@ -1,0 +1,32 @@
+{
+ "schema_fields": [
+  "init_processing_times",
+  "main_processing_times",
+  "num_jobs",
+  "num_machines",
+  "setup_processing_times"
+ ],
+ "input_schema": "{\"num_jobs\": int, \"num_machines\": int, \"init_processing_times\": [float, ...], \"setup_processing_times\": [float, ...], \"main_processing_times\": [float, ...]}",
+ "smoke_instance_example": {
+  "num_jobs": 4,
+  "num_machines": 2,
+  "init_processing_times": [
+   2.0,
+   3.0,
+   2.0,
+   3.0
+  ],
+  "setup_processing_times": [
+   1.5,
+   1.5,
+   1.5,
+   1.5
+  ],
+  "main_processing_times": [
+   5.0,
+   5.0,
+   5.0,
+   5.0
+  ]
+ }
+}

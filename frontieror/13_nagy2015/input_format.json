@@ -1,0 +1,7 @@
+{
+ "n": "int, number of customers; customers are numbered 1…n and the depot is numbered 0.",
+ "capacity": "float, capacity C shared by all vehicles; in the same common unit of goods used for delivery and pickup demands.",
+ "delivery_demands": "list[float], length n; delivery_demands[i-1] is the delivery demand q_i^D of customer i, i.e., the quantity of goods that must be delivered from the depot in a single shipment.",
+ "pickup_demands": "list[float], length n; pickup_demands[i-1] is the pickup demand q_i^P of customer i, i.e., the quantity of goods that must be collected from the customer in a single pickup and brought back to the depot.",
+ "distance_matrix": "list[list[int]], shape (n+1)×(n+1); distance_matrix[i][j] is the Euclidean distance from node i to node j rounded to the nearest integer, where index 0 denotes the depot and 1…n denote customers; the matrix is symmetric with a zero main diagonal."
+}

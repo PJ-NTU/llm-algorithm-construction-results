@@ -1,0 +1,23 @@
+{
+ "problem_type": "scheduling",
+ "decisions": [
+  {
+   "business": "The processing start time of each job's operation on each machine",
+   "key": "start",
+   "shape": "list[list[int]]",
+   "example": [
+    [
+     0,
+     10,
+     5
+    ],
+    [
+     5,
+     0,
+     12
+    ]
+   ],
+   "completeness": "Must contain n_jobs rows and n_machines columns, listing the start times of all jobs on all machines, even if the start time is 0."
+  }
+ ]
+}

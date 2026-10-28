@@ -1,0 +1,45 @@
+{
+ "problem_type": "other",
+ "decisions": [
+  {
+   "business": "List of coordinates of newly added Steiner points",
+   "key": "steiner_points",
+   "shape": "list[tuple[float,float]]",
+   "example": [
+    [
+     1.5,
+     2.3
+    ],
+    [
+     4.0,
+     5.1
+    ]
+   ],
+   "completeness": "List the coordinates of all Steiner points selected for building the minimum spanning tree"
+  },
+  {
+   "business": "The set of edges connecting all points (terminals and Steiner points)",
+   "key": "edges",
+   "shape": "list[tuple[int,int]]",
+   "example": [
+    [
+     0,
+     3
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     2
+    ]
+   ],
+   "completeness": "List all edges forming the minimum spanning tree; each edge consists of the indices of two points (indices 0 to N-1 are the original terminals, N onward are Steiner points)"
+  }
+ ]
+}

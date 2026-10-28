@@ -1,0 +1,6 @@
+method,execution,feasibility,solution_quality,qte,source,tasks,instances,execution_count,feasibility_count,quality_count,qte_count
+One-shot,0.8,0.45,0.18,0.15,"FrontierOR (Kong et al., 2026), Table 3",20,,,,,
+EoH,0.78,0.72,0.43,0.33,"FrontierOR (Kong et al., 2026), Table 3",20,,,,,
+OpenEvolve,1.0,0.92,0.61,0.49,"FrontierOR (Kong et al., 2026), Table 3",20,,,,,
+CORAL,1.0,1.0,0.67,0.5,"FrontierOR (Kong et al., 2026), Table 3",20,,,,,
+Prototype,1.0,1.0,0.88,0.88,This work (per-instance data),20,100,20/20,100/100,84/95,84/95

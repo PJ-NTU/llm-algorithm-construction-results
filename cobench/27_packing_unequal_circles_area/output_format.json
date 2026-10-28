@@ -1,0 +1,41 @@
+{
+ "problem_type": "other",
+ "decisions": [
+  {
+   "business": "Whether each circle is placed into the container",
+   "key": "packing_status",
+   "shape": "list[int]",
+   "example": [
+    1,
+    0,
+    1,
+    1
+   ],
+   "completeness": "List the selection status of all n circles; 1 means placed, 0 means not placed"
+  },
+  {
+   "business": "The x coordinate of each circle's center",
+   "key": "center_x_coordinates",
+   "shape": "list[float]",
+   "example": [
+    0.5,
+    0.0,
+    -1.2,
+    2.1
+   ],
+   "completeness": "List the x coordinates of all n circles; if not placed, fill in the container center coordinate cx"
+  },
+  {
+   "business": "The y coordinate of each circle's center",
+   "key": "center_y_coordinates",
+   "shape": "list[float]",
+   "example": [
+    0.5,
+    0.0,
+    1.5,
+    -0.8
+   ],
+   "completeness": "List the y coordinates of all n circles; if not placed, fill in the container center coordinate cy"
+  }
+ ]
+}

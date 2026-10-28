@@ -1,0 +1,102 @@
+{
+ "01_adulyasak2015": {
+  "official_name": "adulyasak2015",
+  "sense": "min",
+  "adapter": true
+ },
+ "02_archetti2007": {
+  "official_name": "archetti2007",
+  "sense": "min",
+  "adapter": true
+ },
+ "03_armbruster2012": {
+  "official_name": "armbruster2012",
+  "sense": "min",
+  "adapter": true
+ },
+ "04_bard2002": {
+  "official_name": "bard2002",
+  "sense": "min",
+  "adapter": true
+ },
+ "05_bertsimas2022": {
+  "official_name": "bertsimas2022",
+  "sense": "min",
+  "adapter": true
+ },
+ "06_bront2009": {
+  "official_name": "bront2009",
+  "sense": "max",
+  "adapter": true
+ },
+ "07_carvalho1999": {
+  "official_name": "carvalho1999",
+  "sense": "min",
+  "adapter": true
+ },
+ "08_desaulniers2014": {
+  "official_name": "desaulniers2014",
+  "sense": "min",
+  "adapter": true
+ },
+ "09_desaulniers2016": {
+  "official_name": "desaulniers2016",
+  "sense": "min",
+  "adapter": true
+ },
+ "10_furini2021": {
+  "official_name": "furini2021",
+  "sense": "min",
+  "adapter": true
+ },
+ "11_kobeaga2024": {
+  "official_name": "kobeaga2024",
+  "sense": "max",
+  "adapter": true
+ },
+ "12_mehrotra1996": {
+  "official_name": "mehrotra1996",
+  "sense": "min",
+  "adapter": true
+ },
+ "13_nagy2015": {
+  "official_name": "nagy2015",
+  "sense": "min",
+  "adapter": true
+ },
+ "14_pedersen2024": {
+  "official_name": "pedersen2024",
+  "sense": "min",
+  "adapter": true
+ },
+ "15_pinnoi1997": {
+  "official_name": "pinnoi1997",
+  "sense": "min",
+  "adapter": true
+ },
+ "16_roberti2018": {
+  "official_name": "roberti2018",
+  "sense": "min",
+  "adapter": true
+ },
+ "17_rostami2021": {
+  "official_name": "rostami2021",
+  "sense": "min",
+  "adapter": true
+ },
+ "18_schwerdfeger2016": {
+  "official_name": "schwerdfeger2016",
+  "sense": "min",
+  "adapter": true
+ },
+ "19_wangk2020": {
+  "official_name": "wangk2020",
+  "sense": "min",
+  "adapter": true
+ },
+ "20_watermeyer2020": {
+  "official_name": "watermeyer2020",
+  "sense": "min",
+  "adapter": true
+ }
+}

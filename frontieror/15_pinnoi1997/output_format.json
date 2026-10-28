@@ -1,0 +1,19 @@
+{
+ "problem_type": "Assembly line balancing integer optimization problem with a fixed number of stations: minimize the maximum station idle time subject to unique task assignment, station ranges, immediate precedence relations, and cycle capacity constraints.",
+ "decisions": [
+  {
+   "key": "task_stations",
+   "business": "Station to which each task is assigned, given by task number.",
+   "shape": "list[int], length num_tasks; position i-1 corresponds to task i, and elements are 1-based station numbers.",
+   "example": "[1, 1, 2, 3]",
+   "completeness": "Must contain exactly num_tasks integers; the station of each task must lie within its closed interval [earliest_stations[i-1], latest_stations[i-1]]; every immediate precedence arc must satisfy that the predecessor station is not greater than the successor station; the total processing time of each station must not exceed cycle_time."
+  },
+  {
+   "key": "worst_case_idle_time",
+   "business": "Maximum idle time over all fixed stations, which is also the objective value being minimized.",
+   "shape": "int scalar, nonnegative.",
+   "example": "4",
+   "completeness": "Must equal max_{s=1…num_stations}(cycle_time − total task processing time of station s), where all fixed stations take part in the computation; must also not be lower than floor((num_stations × cycle_time − sum(processing_times)) / cycle_time)."
+  }
+ ]
+}

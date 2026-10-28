@@ -1,0 +1,24 @@
+{
+ "schema_fields": [
+  "max_steiner_points",
+  "points"
+ ],
+ "input_schema": "{\"points\": [[float, ...], ...], \"max_steiner_points\": int}",
+ "smoke_instance_example": {
+  "points": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    2.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.732
+   ]
+  ],
+  "max_steiner_points": 1
+ }
+}

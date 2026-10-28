@@ -1,0 +1,6 @@
+{
+ "n": "int; total number of candidate options (unit: count). Non-negative integer; 0 is allowed. Options are indexed 0..n-1 (0-based); the lengths of costs and covers must both equal n.",
+ "m": "int; total number of tasks (unit: count). Non-negative integer; 0 is allowed. Tasks are indexed 0..m-1 (0-based).",
+ "costs": "list[float]; length n, indexed by option index; costs[j] is the cost of selecting option j (unit: currency units). A finite real; may have decimals, may be 0, must not be negative; any negative value, NaN or infinity makes the input invalid.",
+ "covers": "list[list[int]]; outer length n, indexed by option index; covers[j] is the list of task indices covered by option j (unit: task index), representing a set, so element order is irrelevant. covers[j] may be an empty list; each element must be an integer in 0..m-1; the same covers[j] must not contain duplicate indices. Any out-of-range or duplicate index makes the input invalid."
+}

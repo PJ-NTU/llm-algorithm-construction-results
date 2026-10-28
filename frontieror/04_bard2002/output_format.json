@@ -1,0 +1,47 @@
+{
+ "problem_type": "Single-depot homogeneous-vehicle pickup routing with customer departure time windows and capacity constraints. The only objective is to minimise len(routes), i.e. the number of vehicles dispatched; each route is executed by one separate vehicle, there is no additional fleet-size limit, and no distance, time or other secondary objective. Coverage, capacity, time and forbidden-arc rules are all hard constraints. The solution is a JSON object containing all six fields below; no arc matrix, objective value or unused auxiliary times are required.",
+ "decisions": [
+  {
+   "key": "status",
+   "business": "Distinguishes submitting a complete feasible route plan from reporting that the instance is truly infeasible.",
+   "shape": "string; must be \"feasible\" or \"infeasible\"; required.",
+   "example": "\"feasible\"",
+   "completeness": "feasible means the other five fields together form a complete plan satisfying all hard constraints; this flag alone does not claim optimality, and the optimisation direction is still fewer vehicles is better, with no secondary ranking. infeasible is used only when a valid instance truly has no complete feasible plan; it cannot mean that no plan has been found yet, nor that the input format or data-structure guarantees are wrong; in that case the other five fields must all be present and all be []. A valid instance with n=0 must return feasible, with the other five fields all []."
+  },
+  {
+   "key": "routes",
+   "business": "Set of vehicle routes. Each route corresponds to one separate vehicle, and the number of routes R=len(routes) is the vehicle count, the only quantity to minimise.",
+   "shape": "list[list[int]]; when feasible the outer length is R, the first-axis index r is the route number, using zero-based array indexing; the inner length is m_r+2, m_r>=1, in the order [0, customer ids..., 0]. Routes may have different numbers of customers. [] when infeasible.",
+   "example": "[[0, 1, 2, 0], [0, 3, 0]]",
+   "completeness": "When feasible and n>0, every id 1 to n must appear exactly once in the interior positions of all routes, with no omissions, duplicates or other ids; every route must start and end at depot 0, 0 must not appear in the interior, and empty routes [0,0] or self-loops are not allowed. No arc between adjacent customers in a route may belong to the arcs pre-excluded by the input rules, and the time and load recursions must be satisfied. Different routes are executed by different vehicles; multiple depot round trips must not be merged and counted as the same vehicle. The outer order of routes carries no ranking meaning, but it must align with route_departure_times and route_return_times. Must be [] when n=0. Route, time and load fields must all be complete and mutually consistent; submitting only some routes is not allowed."
+  },
+  {
+   "key": "route_departure_times",
+   "business": "Absolute time at which each actually used route leaves the depot.",
+   "shape": "list[float]; when feasible length R, element r corresponds to routes[r], all finite reals; [] when infeasible.",
+   "example": "[0.0, 1.0]",
+   "completeness": "Each route must have one value satisfying depot_time_window[0]<=value<=depot_time_window[1]. Different routes may choose independently and need not depart simultaneously. If the first customer of routes[r] is i, then customer_departure_times[i-1] must be at least this value plus c_0i, where c_0i=base_travel_times[0][i]. No additional requirement of non-negativity or a fixed time grid; only the depot horizon applies. [] when R=0; auxiliary departure times of non-first customers in the model are not output."
+  },
+  {
+   "key": "customer_departure_times",
+   "business": "Departure time of each customer after service; ordered by customer id, not by route visiting order.",
+   "shape": "list[float]; when feasible length n, index k corresponds to customer k+1, all finite reals; [] when infeasible, with no placeholder times even when n>0.",
+   "example": "[2.0, 5.0, 4.0]",
+   "completeness": "When feasible every customer must have one value within the corresponding closed interval in customer_time_windows. For adjacent customers i, j in any route, the value of j in this field must be at least the value of i plus c_ij, with c_ij computed per the input contract; slack is allowed and equality is not required. The first customer must satisfy the depot departure timing and the last customer the depot return timing. Service time is already handled in the outgoing effective travel time of the departing customer and is not counted again; there is also no requirement that departure time plus service time remain within the window. [] when n=0."
+  },
+  {
+   "key": "route_return_times",
+   "business": "Absolute time at which each actually used route finally returns to the depot.",
+   "shape": "list[float]; when feasible length R, element r corresponds to routes[r], all finite reals; [] when infeasible.",
+   "example": "[8.0, 7.0]",
+   "completeness": "Each route must have one value satisfying depot_time_window[0]<=value<=depot_time_window[1]. If the last customer of routes[r] is i, this value must be at least customer_departure_times[i-1]+c_i0, where c_i0=max(base_travel_times[i][0]+customer_service_times[i-1],depot_time_window[0]-customer_time_windows[i-1][1]), not truncated again. Returning exactly at the end of the horizon is allowed. [] when R=0; auxiliary return times of non-last customers in the model are not output."
+  },
+  {
+   "key": "customer_loads",
+   "business": "Cumulative load label when leaving each customer, keeping the lower-bound recursion specified by the mathematical model; the quantity unit matches the input demands and capacity.",
+   "shape": "list[float]; when feasible length n, index k corresponds to customer k+1, all finite non-negative reals; [] when infeasible, with no placeholder loads even when n>0.",
+   "example": "[2.0, 5.0, 4.0]",
+   "completeness": "When feasible the value L_i of every customer i must satisfy customer_demands[i-1]<=L_i<=vehicle_capacity. The first customer of a route uses the initial depot load 0 as the predecessor load; any adjacent customers i, j must satisfy L_j>=L_i+customer_demands[j-1]. The greater-than-or-equal is kept strictly and is not forced into an equality. The labels may simply be filled with the demand prefix sums of each route, which is also the actual cumulative pickup after the vehicle departs empty; optional slack in the labels does not allow extra loading, discarding or unloading en route. A depot return does not clear the goods to continue service, and no depot load label is output. Using capacity exactly is valid. [] when n=0."
+  }
+ ]
+}

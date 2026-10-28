@@ -1,0 +1,11 @@
+method,group,average_score,valid_rate,survival_rate,source,problems,instances
+Prototype,This work,0.97,1.0,0.712,This work (per-instance data),36,6155
+LACE,LLM-based,0.945,0.944,0.623,LACE paper (Gong et al., Nat. Mach. Intell. 2026),36,
+EoH-S,LLM-based,0.87,0.611,0.45,"LACE paper (Gong et al., Nat. Mach. Intell. 2026), supplementary overall comparison table",36,
+HeurAgenix,LLM-based,0.855,0.583,0.42,"LACE paper (Gong et al., Nat. Mach. Intell. 2026), supplementary overall comparison table",36,
+FunSearch,LLM-based,0.842,0.5,0.426,"CO-Bench (Sun et al., AAAI 2026), Figure 3",36,
+EoH,LLM-based,0.84,0.555,0.39,"CO-Bench (Sun et al., AAAI 2026), Figure 3",36,
+Greedy Refine,LLM-based,0.84,0.555,0.448,"CO-Bench (Sun et al., AAAI 2026), Figure 3",36,
+ReEvo,LLM-based,0.774,0.555,0.32,"CO-Bench (Sun et al., AAAI 2026), Figure 3",36,
+o3 Mini Direct,Bare LLM,0.571,0.361,0.19,"CO-Bench (Sun et al., AAAI 2026), Figure 3",36,
+Classical solver,Classical,0.797,0.611,0.394,"CO-Bench (Sun et al., AAAI 2026), Figure 3",36,

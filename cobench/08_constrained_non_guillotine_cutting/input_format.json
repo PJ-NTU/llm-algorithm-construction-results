@@ -1,0 +1,47 @@
+{
+ "schema_fields": [
+  "big_m",
+  "max_slots",
+  "max_usage",
+  "min_usage",
+  "num_piece_types",
+  "piece_lengths",
+  "piece_values",
+  "piece_widths",
+  "stock_length",
+  "stock_width"
+ ],
+ "input_schema": "{\"stock_length\": float, \"stock_width\": float, \"num_piece_types\": int, \"max_slots\": int, \"piece_lengths\": [float, ...], \"piece_widths\": [float, ...], \"piece_values\": [float, ...], \"min_usage\": [int, ...], \"max_usage\": [int, ...], \"big_m\": float}",
+ "smoke_instance_example": {
+  "stock_length": 100.0,
+  "stock_width": 100.0,
+  "num_piece_types": 3,
+  "max_slots": 5,
+  "piece_lengths": [
+   30.0,
+   50.0,
+   20.0
+  ],
+  "piece_widths": [
+   40.0,
+   20.0,
+   20.0
+  ],
+  "piece_values": [
+   100.0,
+   150.0,
+   50.0
+  ],
+  "min_usage": [
+   0,
+   0,
+   0
+  ],
+  "max_usage": [
+   2,
+   2,
+   2
+  ],
+  "big_m": 1000.0
+ }
+}

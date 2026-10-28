@@ -1,0 +1,36 @@
+{
+ "schema_fields": [
+  "edges",
+  "n"
+ ],
+ "input_schema": "{\"n\": int, \"edges\": [[int, ...], ...]}",
+ "smoke_instance_example": {
+  "n": 5,
+  "edges": [
+   [
+    2,
+    4
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    4
+   ],
+   [
+    2,
+    3
+   ]
+  ]
+ }
+}

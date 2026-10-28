@@ -1,0 +1,18 @@
+{
+ "problem_type": "selection",
+ "decisions": [
+  {
+   "business": "Whether each candidate set is selected (1 = selected, 0 = not selected)",
+   "key": "selection_status",
+   "shape": "list[int]",
+   "example": [
+    1,
+    0,
+    1,
+    1,
+    0
+   ],
+   "completeness": "List the selection status of all n candidate sets, including unselected sets (value 0)"
+  }
+ ]
+}

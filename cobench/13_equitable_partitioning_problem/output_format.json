@@ -1,0 +1,18 @@
+{
+ "problem_type": "assignment",
+ "decisions": [
+  {
+   "business": "The group number each individual belongs to (0-7)",
+   "key": "group_assignment",
+   "shape": "dict[str, int]",
+   "example": {
+    "person_0": 2,
+    "person_1": 0,
+    "person_2": 7,
+    "person_3": 2,
+    "person_4": 5
+   },
+   "completeness": "Must contain the grouping of all N individuals; keys are individual identifiers and values are the assigned group indices"
+  }
+ ]
+}

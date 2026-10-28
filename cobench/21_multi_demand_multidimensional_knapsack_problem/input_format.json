@@ -1,0 +1,10 @@
+{
+ "n": "int; number of items N, N >= 1. Item index j ranges over 0..N-1.",
+ "m": "int; number of capacity (resource) constraints M, M >= 0; M = 0 means no capacity constraints. Resource index i ranges over 0..M-1.",
+ "q": "int; number of demand constraints Q, Q >= 0; Q = 0 means no demand constraints. Demand index k ranges over 0..Q-1.",
+ "cost_vector": "list[int], length N; cost_vector[j] = c_j is the value coefficient of item j, the quantity to be maximised. Integer, may be positive, negative or 0; unit not given in the problem. Axis 0 = item j (numbered from 0).",
+ "A_leq": "list[list[int]], shape M×N; A_leq[i][j] is the consumption of resource i when item j is selected. Non-negative integer; unit not given in the problem. Axis 0 (outer rows) = resource constraint i, axis 1 (inner columns) = item j, both numbered from 0. Empty list [] when M = 0; when M >= 1 every row must have length N.",
+ "b_leq": "list[int], length M; b_leq[i] is the available capacity limit of resource i, with constraint sum_j A_leq[i][j]*x[j] <= b_leq[i]. Non-negative integer; same unit as row i of A_leq. Axis 0 = resource constraint i. [] when M = 0.",
+ "A_geq": "list[list[int]], shape Q×N; A_geq[k][j] is the contribution to demand k when item j is selected. Non-negative integer; unit not given in the problem. Axis 0 (outer rows) = demand constraint k, axis 1 (inner columns) = item j, both numbered from 0. Empty list [] when Q = 0; when Q >= 1 every row must have length N.",
+ "b_geq": "list[int], length Q; b_geq[k] is the minimum required amount of demand k, with constraint sum_j A_geq[k][j]*x[j] >= b_geq[k]. Non-negative integer; same unit as row k of A_geq. Axis 0 = demand constraint k. [] when Q = 0."
+}

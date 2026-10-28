@@ -1,0 +1,218 @@
+[
+ {
+  "id": "01_aircraft_landing",
+  "official_name": "aircraft_landing",
+  "cobench_title": "Aircraft landing",
+  "eval_direction": "min"
+ },
+ {
+  "id": "02_assignment_problem",
+  "official_name": "assignment_problem",
+  "cobench_title": "Assignment problem",
+  "eval_direction": "min"
+ },
+ {
+  "id": "03_assortment_problem",
+  "official_name": "assortment_problem",
+  "cobench_title": "Assortment problem",
+  "eval_direction": "min"
+ },
+ {
+  "id": "04_bin_packing_one_dimensional",
+  "official_name": "bin_packing_one_dimensional",
+  "cobench_title": "Bin packing - one-dimensional",
+  "eval_direction": "max"
+ },
+ {
+  "id": "05_capacitated_warehouse_location",
+  "official_name": "capacitated_warehouse_location",
+  "cobench_title": "Capacitated warehouse location",
+  "eval_direction": "min"
+ },
+ {
+  "id": "06_common_due_date_scheduling",
+  "official_name": "common_due_date_scheduling",
+  "cobench_title": "Common due date scheduling",
+  "eval_direction": "min"
+ },
+ {
+  "id": "07_constrained_guillotine_cutting",
+  "official_name": "constrained_guillotine_cutting",
+  "cobench_title": "Constrained guillotine cutting",
+  "eval_direction": "max"
+ },
+ {
+  "id": "08_constrained_non_guillotine_cutting",
+  "official_name": "constrained_non_guillotine_cutting",
+  "cobench_title": "Constrained non-guillotine cutting",
+  "eval_direction": "max"
+ },
+ {
+  "id": "09_container_loading",
+  "official_name": "container_loading",
+  "cobench_title": "Container loading",
+  "eval_direction": "max"
+ },
+ {
+  "id": "10_container_loading_with_weight_restrictions",
+  "official_name": "container_loading_with_weight_restrictions",
+  "cobench_title": "Container loading with weight restrictions",
+  "eval_direction": "max"
+ },
+ {
+  "id": "11_corporate_structuring",
+  "official_name": "corporate_structuring",
+  "cobench_title": "Corporate structuring",
+  "eval_direction": "max"
+ },
+ {
+  "id": "12_crew_scheduling",
+  "official_name": "crew_scheduling",
+  "cobench_title": "Crew scheduling",
+  "eval_direction": "min"
+ },
+ {
+  "id": "13_equitable_partitioning_problem",
+  "official_name": "equitable_partitioning_problem",
+  "cobench_title": "Equitable partitioning problem",
+  "eval_direction": "min"
+ },
+ {
+  "id": "14_euclidean_steiner_problem",
+  "official_name": "euclidean_steiner_problem",
+  "cobench_title": "Euclidean Steiner problem",
+  "eval_direction": "max"
+ },
+ {
+  "id": "15_flow_shop_scheduling",
+  "official_name": "flow_shop_scheduling",
+  "cobench_title": "Flow shop scheduling",
+  "eval_direction": "max"
+ },
+ {
+  "id": "16_generalised_assignment_problem",
+  "official_name": "generalised_assignment_problem",
+  "cobench_title": "Generalised assignment problem",
+  "eval_direction": "min"
+ },
+ {
+  "id": "17_graph_colouring",
+  "official_name": "graph_colouring",
+  "cobench_title": "Graph colouring",
+  "eval_direction": "min"
+ },
+ {
+  "id": "18_hybrid_reentrant_shop_scheduling",
+  "official_name": "hybrid_reentrant_shop_scheduling",
+  "cobench_title": "Hybrid Reentrant Shop Scheduling",
+  "eval_direction": "min"
+ },
+ {
+  "id": "19_job_shop_scheduling",
+  "official_name": "job_shop_scheduling",
+  "cobench_title": "Job shop scheduling",
+  "eval_direction": "max"
+ },
+ {
+  "id": "20_maximal_independent_set",
+  "official_name": "maximal_independent_set",
+  "cobench_title": "Maximal independent set",
+  "eval_direction": "max"
+ },
+ {
+  "id": "21_multi_demand_multidimensional_knapsack_problem",
+  "official_name": "multi_demand_multidimensional_knapsack_problem",
+  "cobench_title": "Multi-Demand Multidimensional Knapsack problem",
+  "eval_direction": "max"
+ },
+ {
+  "id": "22_multidimensional_knapsack_problem",
+  "official_name": "multidimensional_knapsack_problem",
+  "cobench_title": "Multidimensional knapsack problem",
+  "eval_direction": "max"
+ },
+ {
+  "id": "23_open_shop_scheduling",
+  "official_name": "open_shop_scheduling",
+  "cobench_title": "Open shop scheduling",
+  "eval_direction": "max"
+ },
+ {
+  "id": "24_p_median_capacitated",
+  "official_name": "p_median_capacitated",
+  "cobench_title": "p-median - capacitated",
+  "eval_direction": "max"
+ },
+ {
+  "id": "25_p_median_uncapacitated",
+  "official_name": "p_median_uncapacitated",
+  "cobench_title": "p-median - uncapacitated",
+  "eval_direction": "min"
+ },
+ {
+  "id": "26_packing_unequal_circles",
+  "official_name": "packing_unequal_circles",
+  "cobench_title": "Packing unequal circles",
+  "eval_direction": "max"
+ },
+ {
+  "id": "27_packing_unequal_circles_area",
+  "official_name": "packing_unequal_circles_area",
+  "cobench_title": "Packing unequal circles area",
+  "eval_direction": "max"
+ },
+ {
+  "id": "28_packing_unequal_rectangles_and_squares",
+  "official_name": "packing_unequal_rectangles_and_squares",
+  "cobench_title": "Packing unequal rectangles and squares",
+  "eval_direction": "max"
+ },
+ {
+  "id": "29_packing_unequal_rectangles_and_squares_area",
+  "official_name": "packing_unequal_rectangles_and_squares_area",
+  "cobench_title": "Packing unequal rectangles and squares area",
+  "eval_direction": "max"
+ },
+ {
+  "id": "30_resource_constrained_shortest_path",
+  "official_name": "resource_constrained_shortest_path",
+  "cobench_title": "Resource constrained shortest path",
+  "eval_direction": "min"
+ },
+ {
+  "id": "31_set_covering",
+  "official_name": "set_covering",
+  "cobench_title": "Set covering",
+  "eval_direction": "min"
+ },
+ {
+  "id": "32_set_partitioning",
+  "official_name": "set_partitioning",
+  "cobench_title": "Set partitioning",
+  "eval_direction": "min"
+ },
+ {
+  "id": "33_travelling_salesman_problem",
+  "official_name": "travelling_salesman_problem",
+  "cobench_title": "Travelling salesman problem",
+  "eval_direction": "min"
+ },
+ {
+  "id": "34_uncapacitated_warehouse_location",
+  "official_name": "uncapacitated_warehouse_location",
+  "cobench_title": "Uncapacitated warehouse location",
+  "eval_direction": "min"
+ },
+ {
+  "id": "35_vehicle_routing_period_routing",
+  "official_name": "vehicle_routing_period_routing",
+  "cobench_title": "Vehicle routing_ period routing",
+  "eval_direction": "min"
+ },
+ {
+  "id": "36_unconstrained_guillotine_cutting",
+  "official_name": "unconstrained_guillotine_cutting",
+  "cobench_title": "Unconstrained guillotine cutting",
+  "eval_direction": "max"
+ }
+]

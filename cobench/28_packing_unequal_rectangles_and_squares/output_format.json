@@ -1,0 +1,33 @@
+{
+ "problem_type": "Subset packing optimization of rectangles into a circular container with 90-degree rotation: maximize the number of rectangles successfully packed, i.e., maximize sum(alpha), not the area; there is no secondary objective; any feasible layout attaining the same maximum count is acceptable. The circle center is fixed at the origin and the radius is given by the input. All containment, non-overlap and dummy-position constraints are hard constraints. The solution is a JSON object whose decision fields are exactly alpha, x, y, r, each holding the values of all N rectangles; do not return only the selected rectangles, and do not introduce other decision variables. Packing only a subset, including the empty set, is allowed. The field examples below belong to one array-form example with N=2 and only illustrate the representation; feasibility and optimality must still be checked against the actual input.",
+ "decisions": [
+  {
+   "key": "alpha",
+   "business": "Whether each rectangle is packed into the container: alpha[i]=1 means packed and counted toward the objective count; alpha[i]=0 means not packed. Rectangles that cannot fit may be left unpacked. Whether a rectangle is packed is determined solely by this flag, not inferred from the coordinates or the rotation flag.",
+   "shape": "list[int], shape [N]; the only axis is the rectangle index i=0,...,N-1; each entry must be the integer 0 or 1; booleans are not accepted.",
+   "example": "[1, 0]",
+   "completeness": "A flag must be provided for every one of the N rectangles; unselected rectangles must not be omitted, and null must not be used. When N=0 it is []. The flags must jointly satisfy all hard constraints together with x, y, r at the same index; an optimal solution must maximize the sum of alpha over all feasible selections and layouts. All entries being 0 is allowed, but this does not guarantee optimality; when N=0 the optimal objective value is 0."
+  },
+  {
+   "key": "x",
+   "business": "The x-coordinate of the rectangle's center, not of its left edge or a corner. The unit is length, the same as the input dimensions and radius; the specific unit is unspecified. It may be negative, zero or positive; the x-coordinate of an unselected rectangle must be 0, and a selected rectangle may also be centered at the origin.",
+   "shape": "list[float], shape [N]; the only axis is the rectangle index i=0,...,N-1. Each entry is a finite real, represented as a JSON number; integer form is also accepted; booleans are not accepted.",
+   "example": "[0.0, 0.0]",
+   "completeness": "An x-coordinate must be provided for every one of the N rectangles, without omission or null; when N=0 it is []. When alpha[i]=0, x[i] must be 0. For a rectangle with alpha[i]=1, determine its horizontal and vertical side lengths from r[i]; the four corners obtained by adding or subtracting the corresponding half side lengths to or from the center (x[i],y[i]) must all be at a distance from the origin no greater than container_radius. Any two selected rectangles must satisfy: the absolute difference of their center x-coordinates is at least half the sum of their two horizontal side lengths, or the absolute difference of their center y-coordinates is at least half the sum of their two vertical side lengths. Rectangles may be tangent to the circle and may touch each other along boundaries; the interiors of selected rectangles must not overlap. Unselected rectangles do not take part in the actual containment or pairwise separation requirements."
+  },
+  {
+   "key": "y",
+   "business": "The y-coordinate of the rectangle's center, not of its bottom edge or a corner. The unit is length, the same as the input dimensions and radius; the specific unit is unspecified. It may be negative, zero or positive; the y-coordinate of an unselected rectangle must be 0.",
+   "shape": "list[float], shape [N]; the only axis is the rectangle index i=0,...,N-1. Each entry is a finite real, represented as a JSON number; integer form is also accepted; booleans are not accepted.",
+   "example": "[0.0, 0.0]",
+   "completeness": "A y-coordinate must be provided for every one of the N rectangles, without omission or null; when N=0 it is []. When alpha[i]=0, y[i] must be 0, which together with x[i]=0 forms the dummy position (0,0). The coordinates of selected rectangles must, jointly with x and r, satisfy the hard constraints that all four corners lie in the circle and that rectangles do not pairwise overlap. The dummy positions of unselected rectangles may coincide with each other and may also coincide with the regions occupied by selected rectangles. When N=1 there is no rectangle pair to check for separation; the other requirements are unchanged."
+  },
+  {
+   "key": "r",
+   "business": "Binary rotation flag of each rectangle. When r[i]=0, the horizontal side length is widths[i] and the vertical side length is heights[i]; when r[i]=1, the rectangle is rotated 90 degrees, with horizontal side length heights[i] and vertical side length widths[i]. No other angles are allowed.",
+   "shape": "list[int], shape [N]; the only axis is the rectangle index i=0,...,N-1; each entry must be the integer 0 or 1; booleans are not accepted.",
+   "example": "[0, 1]",
+   "completeness": "A rotation flag must be provided for every one of the N rectangles, without omission or null; when N=0 it is []. A valid binary value must be provided regardless of whether the rectangle is selected or is a square. For an unselected rectangle, r[i] may be 0 or 1 and is not further fixed; for a selected rectangle, after swapping or keeping its width and height according to this flag, it must jointly with x and y satisfy all containment and non-overlap hard constraints."
+  }
+ ]
+}

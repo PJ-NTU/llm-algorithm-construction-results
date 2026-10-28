@@ -1,0 +1,8 @@
+{
+ "num_nodes": "int, total number of nodes n; nodes use zero-based indices from 0 to num_nodes-1 throughout.",
+ "num_edges": "int, total number of undirected edges m; edges use zero-based indices from 0 to num_edges-1 in input order.",
+ "node_weights": "list[int], length must be num_nodes; node_weights[i] is the nonnegative integer weight of node i, in the same abstract weight unit as bisection_capacity.",
+ "edges": "list[list[int]], shape num_edges×2; edges[e]=[u,v] gives the two zero-based node endpoints of the e-th undirected edge, and both u and v must lie in [0,num_nodes-1].",
+ "edge_costs": "list[float], length must be num_edges; edge_costs[e] is the real-valued cut cost of the undirected edge edges[e], aligned entry by entry with edge indices, in abstract cost units.",
+ "bisection_capacity": "int, upper bound B on the total node weight any group may carry, in the same unit as node_weights; must satisfy ceil(sum(node_weights)/2) ≤ B ≤ sum(node_weights)."
+}

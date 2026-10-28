@@ -1,0 +1,56 @@
+{
+ "problem_type": "other",
+ "decisions": [
+  {
+   "business": "Whether each stock sheet type is used (at most two types)",
+   "key": "selected_stock_types",
+   "shape": "list[int]",
+   "example": [
+    1,
+    0,
+    1
+   ],
+   "completeness": "List all stock sheet types; 1 means selected, 0 means not selected"
+  },
+  {
+   "business": "Details of the parts placed in each stock sheet instance (including position, rotation, and part type)",
+   "key": "stock_instances",
+   "shape": "list[dict]",
+   "example": [
+    {
+     "stock_type_id": 1,
+     "placements": [
+      {
+       "piece_type_id": 1,
+       "x": 0.0,
+       "y": 0.0,
+       "is_rotated": 0
+      },
+      {
+       "piece_type_id": 2,
+       "x": 10.5,
+       "y": 0.0,
+       "is_rotated": 1
+      }
+     ]
+    },
+    {
+     "stock_type_id": 3,
+     "placements": []
+    }
+   ],
+   "completeness": "Includes all opened stock sheet instances and the geometric layout of the parts inside them"
+  },
+  {
+   "business": "The total number of parts placed for each part type",
+   "key": "piece_counts",
+   "shape": "dict[str, int]",
+   "example": {
+    "piece_1": 5,
+    "piece_2": 10,
+    "piece_3": 0
+   },
+   "completeness": "List all part types and their total placed counts, which must satisfy the min/max constraints"
+  }
+ ]
+}

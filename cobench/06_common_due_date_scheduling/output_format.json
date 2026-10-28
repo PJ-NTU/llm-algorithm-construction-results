@@ -1,0 +1,17 @@
+{
+ "problem_type": "scheduling",
+ "decisions": [
+  {
+   "business": "The processing order of jobs (job indices arranged in order from 0 to n-1)",
+   "key": "order",
+   "shape": "list[int]",
+   "example": [
+    2,
+    0,
+    3,
+    1
+   ],
+   "completeness": "Must contain the indices of all n jobs and be a complete permutation"
+  }
+ ]
+}

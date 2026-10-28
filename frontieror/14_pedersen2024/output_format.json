@@ -1,0 +1,19 @@
+{
+ "problem_type": "Mixed-integer linear optimization: Steiner tree problem with an energy yield quota, node weights, and a weighted cost/scenic objective",
+ "decisions": [
+  {
+   "key": "node_selected",
+   "business": "Whether the node is in the final tree; a candidate turbine site is 1 if and only if a turbine is built there, a Steiner node is 1 when used for routing, and all substations must be 1.",
+   "shape": "One-dimensional 0/1 integer array of length n; the i-th entry corresponds to node i.",
+   "example": "[1, 1, 1, 0]",
+   "completeness": "Exactly n binary values must be provided with no node omitted; all substation entries must be 1, the total annual energy yield of the selected candidate turbines must reach the quota, and the nodes set to 1 must be fully consistent with the tree described by edge_selected."
+  },
+  {
+   "key": "edge_selected",
+   "business": "Whether each feasible cable edge is laid and included in the final tree.",
+   "shape": "One-dimensional 0/1 integer array of length m; the e-th entry corresponds to edges[e].",
+   "example": "[1, 1, 0]",
+   "completeness": "Exactly m binary values must be provided with no edge omitted; both endpoints of every edge set to 1 must be 1 in node_selected, and all edges set to 1 must form, over all selected nodes, a single connected acyclic tree containing all substations, i.e., the number of selected edges equals the number of selected nodes minus one."
+  }
+ ]
+}

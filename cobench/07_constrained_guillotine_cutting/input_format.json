@@ -1,0 +1,37 @@
+{
+ "schema_fields": [
+  "max_quantities",
+  "num_piece_types",
+  "piece_lengths",
+  "piece_values",
+  "piece_widths",
+  "sheet_length",
+  "sheet_width"
+ ],
+ "input_schema": "{\"sheet_length\": float, \"sheet_width\": float, \"num_piece_types\": int, \"piece_lengths\": [float, ...], \"piece_widths\": [float, ...], \"max_quantities\": [int, ...], \"piece_values\": [float, ...]}",
+ "smoke_instance_example": {
+  "sheet_length": 100.0,
+  "sheet_width": 100.0,
+  "num_piece_types": 3,
+  "piece_lengths": [
+   30.0,
+   50.0,
+   40.0
+  ],
+  "piece_widths": [
+   80.0,
+   40.0,
+   30.0
+  ],
+  "max_quantities": [
+   2,
+   1,
+   2
+  ],
+  "piece_values": [
+   100.0,
+   150.0,
+   80.0
+  ]
+ }
+}

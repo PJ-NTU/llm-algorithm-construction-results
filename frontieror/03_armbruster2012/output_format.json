@@ -1,0 +1,19 @@
+{
+ "problem_type": "two_way_capacitated_minimum_cost_graph_partitioning",
+ "decisions": [
+  {
+   "key": "node_groups",
+   "business": "Group to which each node belongs; node_groups[i]=1 means node i belongs to group 1, node_groups[i]=2 means node i belongs to group 2.",
+   "shape": "list[int], length num_nodes; the i-th entry corresponds to zero-based node i.",
+   "example": "[1, 1, 2, 2]",
+   "completeness": "Must contain exactly num_nodes entries, each of which must be 1 or 2, and both group 1 and group 2 must appear at least once; the total node weight of each group must not exceed bisection_capacity."
+  },
+  {
+   "key": "cut_edges",
+   "business": "Cut indicators given in input edge order; cut_edges[e]=1 if and only if the two endpoints of edges[e] belong to different groups, otherwise 0.",
+   "shape": "list[int], length num_edges; the e-th entry corresponds to the e-th undirected edge in the input.",
+   "example": "[0, 1, 0]",
+   "completeness": "Must contain exactly num_edges entries, each of which must be 0 or 1, and every entry must be exactly consistent with node_groups: 1 when the endpoint groups differ, 0 when they are the same."
+  }
+ ]
+}

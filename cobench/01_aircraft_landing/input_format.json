@@ -1,0 +1,149 @@
+{
+ "schema_fields": [
+  "big_m",
+  "earliest_landing_time",
+  "earliness_penalty_cost",
+  "lateness_penalty_cost",
+  "latest_landing_time",
+  "planes",
+  "runways",
+  "separation_matrix",
+  "target_landing_time"
+ ],
+ "input_schema": "{\"planes\": [int, ...], \"runways\": [int, ...], \"earliest_landing_time\": [float, ...], \"target_landing_time\": [float, ...], \"latest_landing_time\": [float, ...], \"earliness_penalty_cost\": [float, ...], \"lateness_penalty_cost\": [float, ...], \"separation_matrix\": [[[[float, ...], ...], ...], ...], \"big_m\": float}",
+ "smoke_instance_example": {
+  "planes": [
+   0,
+   1,
+   2
+  ],
+  "runways": [
+   0,
+   1
+  ],
+  "earliest_landing_time": [
+   80.0,
+   90.0,
+   130.0
+  ],
+  "target_landing_time": [
+   105.0,
+   105.0,
+   145.0
+  ],
+  "latest_landing_time": [
+   120.0,
+   130.0,
+   170.0
+  ],
+  "earliness_penalty_cost": [
+   1.5,
+   2.0,
+   1.0
+  ],
+  "lateness_penalty_cost": [
+   2.5,
+   3.0,
+   2.0
+  ],
+  "separation_matrix": [
+   [
+    [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     [
+      30.0,
+      5.0
+     ],
+     [
+      5.0,
+      30.0
+     ]
+    ],
+    [
+     [
+      30.0,
+      5.0
+     ],
+     [
+      5.0,
+      30.0
+     ]
+    ]
+   ],
+   [
+    [
+     [
+      30.0,
+      5.0
+     ],
+     [
+      5.0,
+      30.0
+     ]
+    ],
+    [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     [
+      30.0,
+      5.0
+     ],
+     [
+      5.0,
+      30.0
+     ]
+    ]
+   ],
+   [
+    [
+     [
+      30.0,
+      5.0
+     ],
+     [
+      5.0,
+      30.0
+     ]
+    ],
+    [
+     [
+      30.0,
+      5.0
+     ],
+     [
+      5.0,
+      30.0
+     ]
+    ],
+    [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ]
+  ],
+  "big_m": 10000.0
+ }
+}

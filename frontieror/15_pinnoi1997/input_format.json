@@ -1,0 +1,9 @@
+{
+ "num_tasks": "int, total number of tasks n; tasks use 1-based numbering 1…n, and every task-indexed list stores the data of task i at position i-1.",
+ "processing_times": "list[int], length must be num_tasks; processing_times[i-1] is the positive integer processing time of task i, in the same unit as cycle_time.",
+ "cycle_time": "int, positive integer cycle time C; the maximum total task processing time any station can accommodate, in the same unit as processing_times.",
+ "num_stations": "int, fixed number of stations m; stations use 1-based numbering 1…m. This value is the instance-given minimum feasible number of stations, not a variable to be optimized.",
+ "precedence_arcs": "list[list[int]], list of immediate precedence arcs; each element is strictly [predecessor, successor], both numbered 1…num_tasks, meaning the station number of the predecessor task must not be greater than the station number of the successor task. An empty list means there are no precedence arcs.",
+ "earliest_stations": "list[int], length must be num_tasks; earliest_stations[i-1] is the earliest station number E_i to which task i can be assigned, using 1-based station numbering and inclusive of that endpoint.",
+ "latest_stations": "list[int], length must be num_tasks; latest_stations[i-1] is the latest station number L_i to which task i can be assigned, using 1-based station numbering and inclusive of that endpoint; must satisfy earliest_stations[i-1] ≤ latest_stations[i-1]."
+}

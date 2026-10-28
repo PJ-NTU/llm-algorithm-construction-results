@@ -1,0 +1,26 @@
+{
+ "problem_type": "finite_horizon_inventory_routing_problem_with_homogeneous_capacitated_fleet",
+ "decisions": [
+  {
+   "key": "routes",
+   "business": "Visiting order of customers for each period and each vehicle; the distribution center is not written in the sequence but is implicit at the start and end of each non-empty route, so [1,3] means 0→1→3→0, and an empty list means the vehicle does not operate in that period.",
+   "shape": "list[list[list[int]]], fixed outer shape [num_periods][num_vehicles][variable-length customer sequence]; customer numbers use 1,…,num_customers.",
+   "example": "[[[1, 3], [2]], [[2], []]]",
+   "completeness": "A list must be provided for every period and every vehicle slot, including empty lists for non-operating vehicles; within the same period each customer appears in at most one vehicle list, each non-empty list must not repeat customers, and must be consistent with the delivery records of the corresponding vehicle in deliveries."
+  },
+  {
+   "key": "deliveries",
+   "business": "Records, per period and per vehicle, the quantity of product delivered to each customer; this representation preserves the correspondence between delivery quantities and specific routes.",
+   "shape": "list[list[list[float]]], fixed shape [num_periods][num_vehicles][num_customers]; deliveries[t][k][i-1] corresponds to period t+1, vehicle k+1, customer i.",
+   "example": "[[[4.0, 0.0, 2.0], [0.0, 3.0, 0.0]], [[0.0, 1.0, 0.0], [0.0, 0.0, 0.0]]]",
+   "completeness": "All T×m×n values must be given and nonnegative; an entry must be 0 when the customer does not appear in the corresponding routes[t][k], the total delivery of each vehicle in each period must not exceed vehicle_capacity, and a customer may be served in a period only by the unique vehicle whose route contains it."
+  },
+  {
+   "key": "ending_inventories",
+   "business": "Gives the end-of-period inventory of the distribution center and all customers in each period after production, delivery, and demand are accounted for, used to verify inventory balance, stockouts, capacity, and holding costs.",
+   "shape": "list[list[float]], fixed shape [num_periods][num_customers+1]; ending_inventories[t][0] is the distribution center inventory, ending_inventories[t][i] is the inventory of customer i.",
+   "example": "[[5.0, 1.0, 0.0, 2.0], [4.0, 0.0, 1.0, 1.0]]",
+   "completeness": "The distribution center and all customer inventories must be given for every period and must strictly satisfy inventory balance with the initial inventories, production, demand, and deliveries; all end-of-period inventories must be nonnegative, the distribution center end-of-period inventory must not exceed its capacity, and a customer's inventory after receiving goods and before demand occurs must not exceed its capacity."
+  }
+ ]
+}

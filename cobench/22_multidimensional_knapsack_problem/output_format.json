@@ -1,0 +1,1 @@
+{"problem_type": "Multidimensional knapsack problem", "decisions": [{"key": "selection_status", "shape": "list[int]", "business": "Whether each item is selected into the knapsack (1 = selected, 0 = not selected). example: [1, 0, 1, 1, 0]. Must include the status of all n items; unselected items must still be marked 0"}]}

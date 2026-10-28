@@ -1,0 +1,19 @@
+{
+ "problem_type": "uncapacitated_facility_location (uncapacitated facility location problem, UFLP: decide with 0/1 variables which candidate facilities to open, and assign each customer entirely to exactly one open facility, minimizing the sum of fixed opening costs and allocation costs)",
+ "decisions": [
+  {
+   "key": "y",
+   "business": "Whether each candidate facility is opened: y[i] = 1 means facility i is opened and its fixed cost fixed_cost[i] is counted; y[i] = 0 means it is not opened, and the facility cannot serve any customer",
+   "shape": "list[int], length M (= input m_facilities); y[i] corresponds to facility i (i = 0..M-1), aligned with input fixed_cost[i] and row i of alloc_cost; elements are integers 0 or 1",
+   "example": "[1, 0, 1]",
+   "completeness": "The solution must contain the key y; length exactly M, with a value given for every facility; elements must be JSON integers 0 or 1 (true/false, 1.0, 0.5, etc. are all invalid); together with x it must satisfy C2: every facility i with x[i][j] = 1 must have y[i] = 1; since N ≥ 1, at least one facility is opened; y[i] = 1 with row i of x all 0 is allowed (opened but idle, fixed cost still counted), and opening all facilities is also allowed"
+  },
+  {
+   "key": "x",
+   "business": "Which facility serves each customer: x[i][j] = 1 means customer j is served entirely by facility i, and the allocation cost alloc_cost[i][j] is counted; x[i][j] = 0 means customer j is not served by facility i; splitting a customer proportionally among multiple facilities is not allowed",
+   "shape": "list[list[int]], M rows and N columns, with the same axis order as input alloc_cost (facility × customer): the i-th outer element is the row of facility i (i = 0..M-1), and the j-th element within a row corresponds to customer j (j = 0..N-1); elements are integers 0 or 1",
+   "example": "[[1, 1, 0, 0], [0, 0, 0, 0], [0, 0, 1, 1]]",
+   "completeness": "The solution must contain the key x; outer length exactly M, each row length exactly N; elements must be JSON integers 0 or 1 (true/false, 1.0, 0.5, etc. are all invalid; fractional assignment is invalid); every column has exactly one 1, i.e., each customer is served by exactly one facility, with none omitted (C1); x[i][j] = 1 requires y[i] = 1 (C2); assignment to the cheapest open facility is not required, and assigning to a more expensive open facility is still valid, just with a higher total cost; the total cost is computed as Σ fixed_cost[i]·y[i] + Σ alloc_cost[i][j]·x[i][j]"
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "num_periods": "int, number of planning periods T; periods use zero-based indices t=0,…,T-1 in arrays, corresponding to model periods 1,…,T.",
+ "num_customers": "int, number of customers n; locations are numbered 0,…,n, where 0 is the distribution center and 1,…,n are customers.",
+ "num_vehicles": "int, maximum number of homogeneous vehicles m available in each period; vehicle slots in the output use zero-based indices k=0,…,m-1.",
+ "vehicle_capacity": "float, common load capacity Q of each vehicle in each period, in units of product quantity, must be nonnegative.",
+ "travel_costs": "list[list[float]], travel cost matrix of shape (n+1)×(n+1); travel_costs[i][j] is the cost from location i to location j, with location 0 being the distribution center; the matrix must be symmetric with a zero diagonal and use the rounded Euclidean distance costs specified in the problem statement.",
+ "production": "list[float], length T; production[t] is the known production added to the distribution center inventory at the start of period t+1, in units of product quantity, must be nonnegative.",
+ "demands": "list[list[float]], shape n×T; demands[i-1][t] is the consumption demand of customer i in period t+1; the first axis corresponds to customers 1,…,n in order and the second axis to periods 1,…,T; values must be nonnegative.",
+ "inventory_capacities": "list[float], length n+1; inventory_capacities[i] is the inventory capacity of location i, where index 0 corresponds to the distribution center and indices 1,…,n correspond to customers, in units of product quantity.",
+ "initial_inventories": "list[float], length n+1; initial_inventories[i] is the inventory of location i before the start of the planning horizon, with the same index convention as inventory_capacities, and must lie between 0 and that location's inventory capacity.",
+ "holding_costs": "list[float], length n+1; holding_costs[i] is the holding cost per unit of inventory at the end of each period at location i, where index 0 corresponds to the distribution center and indices 1,…,n correspond to customers, in units of cost unit/product unit/period."
+}

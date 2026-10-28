@@ -1,0 +1,101 @@
+{
+ "schema_fields": [
+  "S",
+  "area",
+  "length",
+  "m",
+  "max",
+  "min",
+  "piece_area",
+  "piece_length",
+  "piece_width",
+  "pieces",
+  "stocks",
+  "width"
+ ],
+ "input_schema": "{\"m\": int, \"S\": int, \"length\": [float, ...], \"width\": [float, ...], \"area\": [float, ...], \"piece_length\": [float, ...], \"piece_width\": [float, ...], \"piece_area\": [float, ...], \"min\": [int, ...], \"max\": [int, ...], \"stocks\": [{\"length\": float, \"width\": float, \"fixed_cost\": float}, ...], \"pieces\": [{\"length\": float, \"width\": float, \"min\": int, \"max\": int, \"value\": float}, ...]}",
+ "smoke_instance_example": {
+  "m": 3,
+  "S": 3,
+  "length": [
+   100.0,
+   50.0,
+   120.0
+  ],
+  "width": [
+   100.0,
+   50.0,
+   80.0
+  ],
+  "area": [
+   10000.0,
+   2500.0,
+   9600.0
+  ],
+  "piece_length": [
+   30.0,
+   50.0,
+   10.0
+  ],
+  "piece_width": [
+   40.0,
+   20.0,
+   10.0
+  ],
+  "piece_area": [
+   1200.0,
+   1000.0,
+   100.0
+  ],
+  "min": [
+   1,
+   1,
+   0
+  ],
+  "max": [
+   2,
+   1,
+   5
+  ],
+  "stocks": [
+   {
+    "length": 100.0,
+    "width": 100.0,
+    "fixed_cost": 500.0
+   },
+   {
+    "length": 50.0,
+    "width": 50.0,
+    "fixed_cost": 200.0
+   },
+   {
+    "length": 120.0,
+    "width": 80.0,
+    "fixed_cost": 600.0
+   }
+  ],
+  "pieces": [
+   {
+    "length": 30.0,
+    "width": 40.0,
+    "min": 1,
+    "max": 2,
+    "value": 10.0
+   },
+   {
+    "length": 50.0,
+    "width": 20.0,
+    "min": 1,
+    "max": 1,
+    "value": 15.0
+   },
+   {
+    "length": 10.0,
+    "width": 10.0,
+    "min": 0,
+    "max": 5,
+    "value": 5.0
+   }
+  ]
+ }
+}

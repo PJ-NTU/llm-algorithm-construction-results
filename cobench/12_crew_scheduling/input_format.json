@@ -1,0 +1,105 @@
+{
+ "schema_fields": [
+  "finish_times",
+  "max_crews",
+  "max_duty_time",
+  "num_tasks",
+  "start_times",
+  "transition_costs",
+  "valid_transitions"
+ ],
+ "input_schema": "{\"num_tasks\": int, \"max_crews\": int, \"max_duty_time\": float, \"start_times\": [float, ...], \"finish_times\": [float, ...], \"transition_costs\": [[float, ...], ...], \"valid_transitions\": [[int, ...], ...]}",
+ "smoke_instance_example": {
+  "num_tasks": 5,
+  "max_crews": 3,
+  "max_duty_time": 60.0,
+  "start_times": [
+   10.0,
+   5.0,
+   25.0,
+   30.0,
+   45.0
+  ],
+  "finish_times": [
+   20.0,
+   15.0,
+   35.0,
+   40.0,
+   55.0
+  ],
+  "transition_costs": [
+   [
+    0.0,
+    0.0,
+    27.7675025087889,
+    13.444218515250482,
+    35.338241641058254
+   ],
+   [
+    0.0,
+    0.0,
+    12.579544029403024,
+    32.14802412351243,
+    43.51395767104318
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    9.205715808308451
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    29.09938178236782
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  ],
+  "valid_transitions": [
+   [
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   [
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ]
+ }
+}

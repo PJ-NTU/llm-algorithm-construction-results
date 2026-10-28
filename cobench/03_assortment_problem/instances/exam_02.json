@@ -1,0 +1,100 @@
+{
+ "m": 4,
+ "S": 3,
+ "length": [
+  188,
+  155,
+  197
+ ],
+ "width": [
+  168,
+  134,
+  175
+ ],
+ "area": [
+  31584,
+  20770,
+  34475
+ ],
+ "piece_length": [
+  47,
+  48,
+  86,
+  66
+ ],
+ "piece_width": [
+  86,
+  89,
+  42,
+  134
+ ],
+ "piece_area": [
+  4042,
+  4272,
+  3612,
+  8844
+ ],
+ "min": [
+  1,
+  1,
+  1,
+  1
+ ],
+ "max": [
+  1,
+  1,
+  1,
+  1
+ ],
+ "stocks": [
+  {
+   "length": 188,
+   "width": 168,
+   "fixed_cost": 31584
+  },
+  {
+   "length": 155,
+   "width": 134,
+   "fixed_cost": 20770
+  },
+  {
+   "length": 197,
+   "width": 175,
+   "fixed_cost": 34475
+  }
+ ],
+ "pieces": [
+  {
+   "length": 47,
+   "width": 86,
+   "min": 1,
+   "max": 1,
+   "value": 4042,
+   "area": 4042
+  },
+  {
+   "length": 48,
+   "width": 89,
+   "min": 1,
+   "max": 1,
+   "value": 4272,
+   "area": 4272
+  },
+  {
+   "length": 86,
+   "width": 42,
+   "min": 1,
+   "max": 1,
+   "value": 3612,
+   "area": 3612
+  },
+  {
+   "length": 66,
+   "width": 134,
+   "min": 1,
+   "max": 1,
+   "value": 8844,
+   "area": 8844
+  }
+ ]
+}

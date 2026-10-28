@@ -1,0 +1,16 @@
+{
+ "num_securities": "int, number of securities n, must be positive; all per-security arrays are ordered by index 0…n-1, corresponding to securities 1…n in the mathematical model.",
+ "expected_returns": "list[float], length n; the i-th entry is the expected return μ_i per unit of capital of security i over the common investment horizon.",
+ "covariance_format": "str, covariance input mode, must be \"direct\" or \"factor\"; the former enables covariance_matrix, the latter enables factor_loadings and idiosyncratic_variances.",
+ "covariance_matrix": "list[list[float]], when covariance_format=\"direct\", an n×n symmetric positive semidefinite matrix whose rows and columns are ordered by security index, with entries in units of squared return; must be an empty array when the factor form is used.",
+ "factor_loadings": "list[list[float]], when covariance_format=\"factor\", a p×n matrix whose row axis is factors and column axis is securities, forming the common-factor covariance as B^T B; must be an empty array when direct covariance is used.",
+ "idiosyncratic_variances": "list[float], when covariance_format=\"factor\", length n; the i-th entry is the nonnegative idiosyncratic variance d_i of security i, and the full covariance is B^T B+Diag(d); must be an empty array when direct covariance is used.",
+ "return_weight": "float, nonnegative return weight λ; the objective subtracts λ times the portfolio expected return from the risk and concentration costs.",
+ "concentration_parameter": "float, strictly positive concentration parameter θ; the concentration penalty is the sum of squared investment fractions divided by 2θ.",
+ "max_securities": "int, maximum number of holdings K, taking a value in 1…n; the number of securities with a positive final investment fraction must not exceed K.",
+ "linear_rule_coefficients": "list[list[float]], m×n linear rule coefficient matrix A, whose row axis is rules and column axis is securities; when there are no linear rules, use empty arrays for it together with the two rule bound fields.",
+ "linear_rule_lower_bounds": "list[float], length m; the r-th entry is the lower bound ℓ_r of rule r, in the same unit as the coefficient-weighted sum of investment fractions of that rule; empty array when there are no rules.",
+ "linear_rule_upper_bounds": "list[float], length m; the r-th entry is the upper bound u_r of rule r, which must satisfy ℓ_r≤u_r; empty array when there are no rules.",
+ "minimum_weights": "list[float], if thresholds are provided, length n, and the i-th entry is the minimum investment fraction m_i allowed when security i is held; if thresholds are not provided, it is an empty array together with maximum_weights and is treated as m_i=0.",
+ "maximum_weights": "list[float], if thresholds are provided, length n, and the i-th entry is the maximum investment fraction M_i allowed when security i is held, with m_i≤M_i; if thresholds are not provided, it is an empty array together with minimum_weights and is treated as M_i=1."
+}

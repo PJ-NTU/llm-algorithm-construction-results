@@ -1,0 +1,45 @@
+{
+ "problem_type": "routing",
+ "decisions": [
+  {
+   "business": "The sequence of vertices traversed in order from the source to the destination",
+   "key": "path",
+   "shape": "list[int]",
+   "example": [
+    1,
+    4,
+    2,
+    5
+   ],
+   "completeness": "List all vertices on the path in order; return an empty list if no feasible path exists"
+  },
+  {
+   "business": "The cumulative consumption of each resource at each vertex upon arrival",
+   "key": "resource_accumulations",
+   "shape": "dict[str, list[float]]",
+   "example": {
+    "1": [
+     10.0,
+     0.0
+    ],
+    "2": [
+     25.5,
+     5.0
+    ],
+    "3": [
+     0.0,
+     0.0
+    ],
+    "4": [
+     15.0,
+     2.0
+    ],
+    "5": [
+     40.0,
+     10.0
+    ]
+   },
+   "completeness": "List the cumulative values of all n vertices in the graph on each resource dimension; vertices not visited can usually be marked 0 or the initial value"
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "problem_type": "scheduling",
+ "decisions": [
+  {
+   "business": "The main machine number each task is assigned to",
+   "key": "machine_assignment",
+   "shape": "dict[str,int]",
+   "example": {
+    "job_0": 0,
+    "job_1": 1,
+    "job_2": 0
+   },
+   "completeness": "Includes the machine assignment of all n tasks"
+  },
+  {
+   "business": "The processing order of tasks in the preparation stage on the remote server",
+   "key": "server_sequence",
+   "shape": "list[str]",
+   "example": [
+    "job_1",
+    "job_0",
+    "job_2"
+   ],
+   "completeness": "Includes the ordering of all n tasks"
+  },
+  {
+   "business": "The specific start times of the three stages (initialization, preparation, main processing) of each task",
+   "key": "start_times",
+   "shape": "dict[str,list[float]]",
+   "example": {
+    "job_0": [
+     0.0,
+     10.0,
+     25.0
+    ],
+    "job_1": [
+     0.0,
+     15.0,
+     30.0
+    ],
+    "job_2": [
+     5.0,
+     20.0,
+     40.0
+    ]
+   },
+   "completeness": "Includes all n tasks; each task corresponds to a list of length 3, representing s1, s2, s3 respectively"
+  },
+  {
+   "business": "The total completion time for all tasks",
+   "key": "makespan",
+   "shape": "float",
+   "example": 55.5,
+   "completeness": "The objective function value of the optimal solution"
+  }
+ ]
+}

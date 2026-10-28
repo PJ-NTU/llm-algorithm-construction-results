@@ -1,0 +1,36 @@
+{
+ "problem_type": "selection",
+ "decisions": [
+  {
+   "business": "Whether to open this candidate plant",
+   "key": "open_plants",
+   "shape": "list[int]",
+   "example": [
+    1,
+    0,
+    1,
+    1,
+    0
+   ],
+   "completeness": "List the opening status of all num_plants plants; 1 means open, 0 means closed"
+  },
+  {
+   "business": "The supply fraction from each plant for each customer",
+   "key": "assignments",
+   "shape": "dict[str, dict[str, float]]",
+   "example": {
+    "0": {
+     "0": 0.5,
+     "1": 0.0,
+     "2": 0.5
+    },
+    "1": {
+     "0": 0.0,
+     "1": 1.0,
+     "2": 0.0
+    }
+   },
+   "completeness": "Includes all num_customers customers; each customer's dict contains the allocation fractions for all num_plants plants (including entries with fraction 0)"
+  }
+ ]
+}

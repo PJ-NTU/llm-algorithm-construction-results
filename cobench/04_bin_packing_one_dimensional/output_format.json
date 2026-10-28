@@ -1,0 +1,31 @@
+{
+ "problem_type": "assignment",
+ "decisions": [
+  {
+   "business": "Whether each bin is used (1 means used, 0 means unused)",
+   "key": "bin_activation",
+   "shape": "list[int]",
+   "example": [
+    1,
+    1,
+    1,
+    0,
+    0
+   ],
+   "completeness": "List the usage status of all n potential bins"
+  },
+  {
+   "business": "The bin index each item is assigned to (0 to n-1)",
+   "key": "item_assignments",
+   "shape": "list[int]",
+   "example": [
+    0,
+    2,
+    0,
+    1,
+    1
+   ],
+   "completeness": "List the bin number of each of the n items"
+  }
+ ]
+}

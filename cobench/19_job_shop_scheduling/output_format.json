@@ -1,0 +1,58 @@
+{
+ "problem_type": "scheduling",
+ "decisions": [
+  {
+   "business": "The start time of each operation in each job",
+   "key": "start_times",
+   "shape": "list[list[float]]",
+   "example": [
+    [
+     0.0,
+     10.0,
+     25.0
+    ],
+    [
+     5.0,
+     15.0,
+     30.0
+    ]
+   ],
+   "completeness": "Includes all n_jobs jobs; each job contains the start times of all n_machines operations"
+  },
+  {
+   "business": "The processing order between jobs on the same machine (0 means j' before j, 1 means j before j')",
+   "key": "machine_precedence",
+   "shape": "dict[str, list[list[int]]]",
+   "example": {
+    "machine_0": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "machine_1": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   },
+   "completeness": "Provide an n_jobs × n_jobs matrix for each machine, recording the precedence relations between all job pairs"
+  },
+  {
+   "business": "The makespan of the entire schedule",
+   "key": "makespan",
+   "shape": "float",
+   "example": 45.5,
+   "completeness": "A single value representing the time point at which the last operation finishes"
+  }
+ ]
+}

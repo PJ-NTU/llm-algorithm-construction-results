@@ -1,0 +1,114 @@
+{
+ "schema_fields": [
+  "boxes.forbidden_orientations",
+  "boxes.rotated_heights",
+  "boxes.rotated_lengths",
+  "boxes.rotated_widths",
+  "boxes.volume",
+  "container_height",
+  "container_length",
+  "container_width",
+  "total_box_instances"
+ ],
+ "input_schema": "{\"container_length\": float, \"container_width\": float, \"container_height\": float, \"total_box_instances\": int, \"boxes.volume\": [float, ...], \"boxes.rotated_lengths\": [[float, ...], ...], \"boxes.rotated_widths\": [[float, ...], ...], \"boxes.rotated_heights\": [[float, ...], ...], \"boxes.forbidden_orientations\": [[any, ...]|[int, ...], ...]}",
+ "smoke_instance_example": {
+  "container_length": 100.0,
+  "container_width": 100.0,
+  "container_height": 100.0,
+  "total_box_instances": 3,
+  "boxes.volume": [
+   60000.0,
+   27000.0,
+   216000.0
+  ],
+  "boxes.rotated_lengths": [
+   [
+    50.0,
+    50.0,
+    40.0,
+    40.0,
+    30.0,
+    30.0
+   ],
+   [
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0
+   ],
+   [
+    60.0,
+    60.0,
+    60.0,
+    60.0,
+    60.0,
+    60.0
+   ]
+  ],
+  "boxes.rotated_widths": [
+   [
+    40.0,
+    30.0,
+    50.0,
+    30.0,
+    50.0,
+    40.0
+   ],
+   [
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0
+   ],
+   [
+    60.0,
+    60.0,
+    60.0,
+    60.0,
+    60.0,
+    60.0
+   ]
+  ],
+  "boxes.rotated_heights": [
+   [
+    30.0,
+    40.0,
+    30.0,
+    50.0,
+    40.0,
+    50.0
+   ],
+   [
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0
+   ],
+   [
+    60.0,
+    60.0,
+    60.0,
+    60.0,
+    60.0,
+    60.0
+   ]
+  ],
+  "boxes.forbidden_orientations": [
+   [
+    4,
+    5
+   ],
+   [
+    4,
+    5
+   ],
+   []
+  ]
+ }
+}

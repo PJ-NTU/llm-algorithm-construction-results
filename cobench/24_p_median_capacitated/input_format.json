@@ -1,0 +1,7 @@
+{
+ "n": "int; number of customers N, which is also the number of median candidates. Requires N ≥ 1. Customer indices are 0..N-1; every customer is also a median candidate, and candidate j is customer j.",
+ "p": "int; number of medians that must be selected exactly. Requires 1 ≤ p ≤ n (p = n is valid).",
+ "capacity": "int; uniform capacity limit of each selected median, a positive integer (≥ 1). Unit not given; same as demands.",
+ "demands": "list[int]; length n. demands[i] is the demand of customer i, a non-negative integer, 0 allowed. Unit not given; same as capacity. Axis 0: customer index i (0..n-1).",
+ "distance_matrix": "list[list[int]]; n×n matrix. distance_matrix[i][j] is the distance counted in the objective when customer i is assigned to median candidate j, a non-negative integer, unit not given. Axis 0 (rows): customer index i (0..n-1); axis 1 (columns): median candidate index j (0..n-1). Not guaranteed to be symmetric (distance_matrix[i][j] may differ from distance_matrix[j][i]); the diagonal distance_matrix[j][j] is not guaranteed to be 0; always use the given values as-is."
+}

@@ -1,0 +1,37 @@
+problem_id,problem,category,instances,official_reference_share,prototype_avg_score,prototype_survival,prototype_above_reference,lace_avg_score,lace_survival,classical_solver_score,funsearch_score
+01_aircraft_landing,Aircraft Landing,Scheduling Problems,49,1.0,0.978372,0.897959,15,0.901131,0.693878,0.59853,0.968886
+02_assignment_problem,Assignment Problem,Location & Assignment,12,1.0,1.0,1.0,0,0.96316,0.25,1.0,1.0
+03_assortment_problem,Assortment Problem,Selection & Knapsack,12,0.0,0.651322,0.166667,2,0.345089,0.0,0.322285,0.362289
+04_bin_packing_one_dimensional,Bin Packing - One-Dimensional,Packing & Cutting,160,0.0,0.977451,0.5,2,0.98789,0.625,0.962805,0.955715
+05_capacitated_warehouse_location,Capacitated Warehouse Location,Location & Assignment,49,1.0,0.993144,0.755102,0,0.997626,0.918367,0.69764,0.719671
+06_common_due_date_scheduling,Common Due Date Scheduling,Scheduling Problems,70,0.0,0.980719,0.457143,1,0.979659,0.442857,0.918766,0.976604
+07_constrained_guillotine_cutting,Constrained Guillotine Cutting,Packing & Cutting,3,1.0,1.0,1.0,0,0.999563,1.0,0.78449,0.956424
+08_constrained_non_guillotine_cutting,Constrained Non-Guillotine Cutting,Packing & Cutting,650,1.0,0.994043,0.832308,9,0.984891,0.478462,0.558508,0.962345
+09_container_loading,Container Loading,Packing & Cutting,762,0.0,0.997161,0.975066,723,0.983495,0.627297,0.0970022,0.23071
+10_container_loading_with_weight_restrictions,Container Loading with Weight Restrictions,Packing & Cutting,700,0.0,0.99603,0.975714,679,0.943276,0.515714,0.00922531,0.291973
+11_corporate_structuring,Corporate Structuring,Selection & Knapsack,10,1.0,0.982788,0.6,0,0.999779,1.0,0.945057,0.777775
+12_crew_scheduling,Crew Scheduling,Scheduling Problems,34,1.0,0.969583,0.382353,0,0.958522,0.441176,0.454988,0.553676
+13_equitable_partitioning_problem,Equitable Partitioning Problem,Selection & Knapsack,10,1.0,1.0,1.0,0,1.0,1.0,1.0,1.0
+14_euclidean_steiner_problem,Euclidean Steiner Problem,Routing & Graphs,234,1.0,0.985703,0.713675,19,0.879087,0.461538,0.97797,0.696818
+15_flow_shop_scheduling,Flow Shop Scheduling,Scheduling Problems,120,0.0,0.953733,0.191667,0,0.986544,0.533333,0.92227,0.853734
+16_generalised_assignment_problem,Generalised Assignment Problem,Location & Assignment,24,1.0,0.999101,1.0,5,0.994508,0.833333,1.00051,0.936091
+17_graph_colouring,Graph Colouring,Routing & Graphs,30,1.0,1.0,1.0,4,0.928901,0.2,0.867912,0.899346
+18_hybrid_reentrant_shop_scheduling,Hybrid Reentrant Shop Scheduling,Scheduling Problems,1350,1.0,0.976187,0.57037,352,0.976246,0.571111,0.905797,1.00018
+19_job_shop_scheduling,Job Shop Scheduling,Scheduling Problems,80,0.0,0.894944,0.225,0,0.888257,0.0,0.820202,0.819282
+20_maximal_independent_set,Maximal Independent Set,Routing & Graphs,244,0.0,0.970247,0.0819672,2,0.936824,0.0,0.986,0.900204
+21_multi_demand_multidimensional_knapsack_problem,Multi-Demand Multidimensional Knapsack Problem,Selection & Knapsack,785,1.0,0.953625,0.307006,0,0.955793,0.315924,0.895782,0.83548
+22_multidimensional_knapsack_problem,Multidimensional Knapsack Problem,Selection & Knapsack,192,1.0,0.9924,0.885417,26,0.984267,0.708333,0.990352,0.977335
+23_open_shop_scheduling,Open Shop Scheduling,Scheduling Problems,60,0.0,0.99043,0.666667,0,0.989166,0.633333,0.785121,0.993028
+24_p_median_capacitated,P-Median - Capacitated,Location & Assignment,20,0.0,0.999711,1.0,0,0.988706,0.65,0.899618,0.974844
+25_p_median_uncapacitated,P-Median - Uncapacitated,Location & Assignment,40,1.0,0.999793,1.0,0,0.999437,1.0,0.995234,0.999678
+26_packing_unequal_circles,Packing Unequal Circles,Packing & Cutting,4,1.0,1.0,1.0,3,0.97197,0.5,0.907576,0.97197
+27_packing_unequal_circles_area,Packing Unequal Circles Area,Packing & Cutting,4,1.0,1.0,1.0,3,0.972213,0.25,0.87679,1.04047
+28_packing_unequal_rectangles_and_squares,Packing Unequal Rectangles and Squares,Packing & Cutting,6,1.0,1.0,1.0,3,0.999999,1.0,0.913463,0.922883
+29_packing_unequal_rectangles_and_squares_area,Packing Unequal Rectangles and Squares Area,Packing & Cutting,6,1.0,1.0,1.0,6,0.992029,0.833333,0.889353,1.0839
+30_resource_constrained_shortest_path,Resource Constrained Shortest Path,Routing & Graphs,23,1.0,0.832444,0.478261,0,0.832444,0.478261,0.75089,0.75089
+31_set_covering,Set Covering,Selection & Knapsack,33,1.0,0.978941,0.909091,0,0.979194,0.909091,0.888391,0.888773
+32_set_partitioning,Set Partitioning,Selection & Knapsack,57,1.0,0.970848,0.736842,0,0.984327,0.912281,0.99964,0.833333
+33_travelling_salesman_problem,Travelling Salesman Problem,Routing & Graphs,272,1.0,0.957047,0.0,0,0.891672,0.0,0.986,0.901674
+34_uncapacitated_warehouse_location,Uncapacitated Warehouse Location,Location & Assignment,15,1.0,1.0,1.0,0,0.996935,0.933333,0.996816,0.99784
+35_vehicle_routing_period_routing,Vehicle Routing - Period Routing,Routing & Graphs,9,1.0,1.0,1.0,9,0.927907,0.111111,0.124379,0.32385
+36_unconstrained_guillotine_cutting,Unconstrained Guillotine Cutting,Packing & Cutting,26,1.0,0.957085,0.307692,1,,,0.972538,0.964637

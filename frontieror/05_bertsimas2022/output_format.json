@@ -1,0 +1,19 @@
+{
+ "problem_type": "Mixed-integer convex quadratic program (MIQP) with cardinality, long-only, and full-investment constraints",
+ "decisions": [
+  {
+   "key": "weights",
+   "business": "Fraction of capital allocated to each security; the objective is to minimize the sum of half the portfolio variance and the concentration penalty, minus the weighted expected return.",
+   "shape": "(num_securities,)",
+   "example": "[0.6, 0.0, 0.4]",
+   "completeness": "Must contain exactly n finite nonnegative numbers, ordered by security index and summing to 1; together with selected, must satisfy the per-security thresholds and all linear rules."
+  },
+  {
+   "key": "selected",
+   "business": "Whether each security enters the final portfolio; 1 means it receives a positive investment fraction, 0 means it is not invested in.",
+   "shape": "(num_securities,)",
+   "example": "[1, 0, 1]",
+   "completeness": "Must contain exactly n 0/1 values in the same order as weights; selected[i]=1 if and only if weights[i]>0, and the number of 1s must not exceed max_securities."
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "problem_type": "0-1 selection combinatorial optimization (multi-demand multidimensional knapsack, MDMKP): choose a subset of the N items such that the total consumption of the selected items on each resource does not exceed the capacity b_leq and their total contribution to each demand is not less than the demand b_geq (all hard constraints), maximizing the total value sum_j cost_vector[j]*x[j]. Feasible solutions with the same objective value are all optimal. The instance may have no feasible solution.",
+ "decisions": [
+  {
+   "key": "x",
+   "business": "Whether each item is selected: x[j] = 1 means item j is selected, x[j] = 0 means not selected. If the instance is determined to have no feasible solution, x is null, explicitly reporting that there is no feasible solution.",
+   "shape": "list[int], length N, ordered by item index j = 0..N-1, each element must be 0 or 1; the whole value is null when there is no feasible solution",
+   "example": "For N=4: {\"x\": [1, 0, 1, 0]}, meaning items 0 and 2 are selected; when there is no feasible solution: {\"x\": null}",
+   "completeness": "When a feasible solution exists, x must be a list of length exactly N, each element the integer 0 or 1 (no missing items, no extra items, no other values), and must satisfy all capacity constraints sum_j A_leq[i][j]*x[j] <= b_leq[i] (i=0..M-1) and all demand constraints sum_j A_geq[k][j]*x[j] >= b_geq[k] (k=0..Q-1); the objective value is computed exactly in integers as sum_j cost_vector[j]*x[j]. x = null is correct only when the instance truly has no feasible solution; giving null when the instance has a feasible solution, or giving an x that violates any constraint, is not a valid solution."
+  }
+ ]
+}

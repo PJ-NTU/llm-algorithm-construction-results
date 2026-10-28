@@ -1,0 +1,16 @@
+{
+ "problem_type": "assignment",
+ "decisions": [
+  {
+   "business": "The task number assigned to each worker (an integer between 0 and n-1)",
+   "key": "assignment",
+   "shape": "list[int]",
+   "example": [
+    2,
+    0,
+    1
+   ],
+   "completeness": "The list length must equal the number of workers n; the value at index i is the task number assigned to worker i, and it must be a complete permutation of 0 to n-1"
+  }
+ ]
+}

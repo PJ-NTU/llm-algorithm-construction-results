@@ -1,0 +1,18 @@
+{
+ "problem_type": "selection",
+ "decisions": [
+  {
+   "business": "Whether each vertex is included in the maximum independent set",
+   "key": "vertex_selection",
+   "shape": "list[int]",
+   "example": [
+    1,
+    0,
+    1,
+    0,
+    0
+   ],
+   "completeness": "List the selection status of all N vertices in the graph (1 = selected, 0 = not selected)"
+  }
+ ]
+}

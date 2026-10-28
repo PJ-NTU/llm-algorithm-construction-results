@@ -1,0 +1,76 @@
+{
+ "schema_fields": [
+  "attribute_matrix",
+  "num_attributes",
+  "num_groups",
+  "num_individuals"
+ ],
+ "input_schema": "{\"num_individuals\": int, \"num_attributes\": int, \"num_groups\": int, \"attribute_matrix\": [[int, ...], ...]}",
+ "smoke_instance_example": {
+  "num_individuals": 12,
+  "num_attributes": 3,
+  "num_groups": 4,
+  "attribute_matrix": [
+   [
+    1,
+    1,
+    1
+   ],
+   [
+    1,
+    1,
+    1
+   ],
+   [
+    1,
+    1,
+    0
+   ],
+   [
+    1,
+    1,
+    1
+   ],
+   [
+    0,
+    1,
+    1
+   ],
+   [
+    0,
+    1,
+    1
+   ],
+   [
+    0,
+    1,
+    1
+   ],
+   [
+    0,
+    1,
+    1
+   ],
+   [
+    0,
+    0,
+    1
+   ],
+   [
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1
+   ]
+  ]
+ }
+}

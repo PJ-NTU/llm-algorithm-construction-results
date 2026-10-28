@@ -1,0 +1,115 @@
+{
+ "problem_type": "other",
+ "decisions": [
+  {
+   "business": "Whether each candidate rectangular piece instance is selected into the cutting pattern",
+   "key": "selection_status",
+   "shape": "list[list[int]]",
+   "example": [
+    [
+     1,
+     1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   "completeness": "Includes the 0/1 status of all part types i with their maximum demand of d_i instances"
+  },
+  {
+   "business": "The bottom-left corner coordinates (x, y) on the stock sheet of each selected rectangular piece instance",
+   "key": "placements",
+   "shape": "list[list[list[float]]]",
+   "example": [
+    [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      50.0
+     ],
+     [
+      -1.0,
+      -1.0
+     ]
+    ],
+    [
+     [
+      100.0,
+      0.0
+     ],
+     [
+      -1.0,
+      -1.0
+     ]
+    ],
+    [
+     [
+      -1.0,
+      -1.0
+     ],
+     [
+      -1.0,
+      -1.0
+     ],
+     [
+      -1.0,
+      -1.0
+     ],
+     [
+      -1.0,
+      -1.0
+     ]
+    ]
+   ],
+   "completeness": "All instances corresponding to selection_status; coordinates of unselected instances are filled with [-1.0, -1.0]"
+  },
+  {
+   "business": "A recursive cutting tree satisfying the guillotine constraint (describing how all selected pieces are separated by horizontal or vertical cuts)",
+   "key": "guillotine_cut_tree",
+   "shape": "dict",
+   "example": {
+    "type": "root",
+    "cut_direction": "vertical",
+    "cut_coordinate": 100.0,
+    "left_child": {
+     "type": "leaf",
+     "piece_index": [
+      0,
+      0
+     ]
+    },
+    "right_child": {
+     "type": "node",
+     "cut_direction": "horizontal",
+     "cut_coordinate": 50.0,
+     "top": {
+      "type": "leaf",
+      "piece_index": [
+       0,
+       1
+      ]
+     },
+     "bottom": {
+      "type": "leaf",
+      "piece_index": [
+       1,
+       0
+      ]
+     }
+    }
+   },
+   "completeness": "Describe the complete cutting path until each sub-region contains exactly one selected part instance or is empty"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "schema_fields": [
+  "due_date",
+  "earliness_penalties",
+  "n",
+  "processing_times",
+  "tardiness_penalties"
+ ],
+ "input_schema": "{\"n\": int, \"due_date\": int, \"processing_times\": [int, ...], \"earliness_penalties\": [int, ...], \"tardiness_penalties\": [int, ...]}",
+ "smoke_instance_example": {
+  "n": 4,
+  "due_date": 21,
+  "processing_times": [
+   11,
+   11,
+   5,
+   9
+  ],
+  "earliness_penalties": [
+   5,
+   4,
+   4,
+   3
+  ],
+  "tardiness_penalties": [
+   8,
+   7,
+   9,
+   6
+  ]
+ }
+}

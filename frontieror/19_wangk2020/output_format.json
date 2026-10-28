@@ -1,0 +1,47 @@
+{
+ "problem_type": "Two-stage stochastic mixed-integer linear program: flight schedule and operational timing optimization under weather uncertainty with airport capacity envelope, en-route duration, and flight connection constraints; the objective is to minimize the weighted sum of schedule displacement cost and expected operational delay cost.",
+ "decisions": [
+  {
+   "key": "scheduled_departure_period",
+   "business": "Scheduled departure period determined for each flight before the weather is revealed.",
+   "shape": "list[int], length n_flights, ordered by flight index.",
+   "example": "[2, 5]",
+   "completeness": "An integer period in 1…n_periods must be provided for each flight; no flight may be omitted, and the maximum schedule displacement and all scheduling connection constraints must be satisfied."
+  },
+  {
+   "key": "scheduled_arrival_period",
+   "business": "Scheduled arrival period determined for each flight before the weather is revealed.",
+   "shape": "list[int], length n_flights, ordered by flight index.",
+   "example": "[4, 7]",
+   "completeness": "An integer period in 1…n_periods must be provided for each flight; for each flight, this value minus scheduled_departure_period must equal scheduled_enroute_duration."
+  },
+  {
+   "key": "operated_departure_period",
+   "business": "Actual departure period used by each flight after each weather scenario is realized.",
+   "shape": "list[list[int]], shape [n_scenarios][n_flights], with scenarios on the first axis and flights on the second axis.",
+   "example": "[[3, 5], [2, 6]]",
+   "completeness": "Every scenario must include all flights, and each entry is an integer in 1…n_periods; these periods must simultaneously satisfy the departure delay limit, aircraft turnaround connections, actual en-route durations, and the airport capacity constraints of the corresponding scenario."
+  },
+  {
+   "key": "operated_arrival_period",
+   "business": "Actual arrival period used by each flight after each weather scenario is realized.",
+   "shape": "list[list[int]], shape [n_scenarios][n_flights], with scenarios on the first axis and flights on the second axis.",
+   "example": "[[5, 7], [4, 8]]",
+   "completeness": "Every scenario must include all flights, and each entry is an integer in 1…n_periods; the difference from operated_departure_period must lie within the lower and upper bounds of the flight's actual en-route duration, and aircraft turnaround connections and capacity constraints must be satisfied."
+  },
+  {
+   "key": "departure_delay",
+   "business": "Number of periods of delay of each flight's actual departure relative to its scheduled departure in each scenario.",
+   "shape": "list[list[float]], shape [n_scenarios][n_flights], with scenarios on the first axis and flights on the second axis.",
+   "example": "[[1, 0], [0, 1]]",
+   "completeness": "Must cover every scenario and flight; each entry must be nonnegative, must not exceed max_departure_delay[f], and must strictly equal operated_departure_period[ω][f] - scheduled_departure_period[f]."
+  },
+  {
+   "key": "arrival_delay",
+   "business": "Nonnegative arrival delay of each flight in each scenario, used for costing and limits.",
+   "shape": "list[list[float]], shape [n_scenarios][n_flights], with scenarios on the first axis and flights on the second axis.",
+   "example": "[[1, 0], [0, 1]]",
+   "completeness": "Must cover every scenario and flight; each entry must be nonnegative, must not exceed max_arrival_delay[f], and must be at least operated_arrival_period[ω][f] - scheduled_arrival_period[f]; this original inequality must not be arbitrarily changed into an equality."
+  }
+ ]
+}

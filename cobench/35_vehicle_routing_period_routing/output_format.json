@@ -1,0 +1,33 @@
+{
+ "problem_type": "Periodic vehicle routing problem (PVRP); the sole objective is to minimize the total Euclidean travel distance of all vehicles over the entire planning period. The objective value is the sum of the products of distance_matrix[i][j] and y[i][j][h][t] over all nodes i, j, vehicle positions h and days t; no other objectives, penalties or secondary ordering are added. All original hard constraints, together with the confirmed self-loop prohibition and exact cumulative load requirement, must be satisfied. The solution dict always contains the four fields status, x, y, u; status is only result metadata, and the mathematical decision variables are still only x, y, u.",
+ "decisions": [
+  {
+   "key": "status",
+   "business": "Distinguishes a complete feasible solution from a mathematically infeasible result; it is not an added decision variable and does not represent vehicle status.",
+   "shape": "string; only \"feasible\" or \"infeasible\" is allowed.",
+   "example": "\"feasible\"",
+   "completeness": "This field is always required. feasible means x, y, u are all complete arrays satisfying all hard constraints; it does not automatically claim that global optimality has been proven, and the optimization direction is still minimizing total distance. infeasible only means that the valid input truly admits no complete feasible solution; in that case the three fields x, y, u must still be present and all set to JSON null; a partially covering solution, empty arrays, or a search that found no solution must not be passed off as infeasible. Invalid input is not a normal infeasible result. The examples of all fields in this file together correspond to one instance: num_customers=1, planning_period=1, num_vehicles=2, vehicle_capacity=3, distance_matrix=[[0,1],[1,0]], demands=[2], candidate_schedules=[[0]], schedule_vectors=[[1]]; vehicle 1 travels 0→1→0 that day, vehicle 2 is idle, and the total distance is 2."
+  },
+  {
+   "key": "x",
+   "business": "Gives each customer's binary choice over all of its candidate schedules, fully corresponding to model variable x[i][s]; no choice variables outside the candidate set are introduced.",
+   "shape": "When status=\"feasible\", list[list[int]]: outer length N, and row p must have length len(candidate_schedules[p]); a variable-length two-dimensional array arranged as customer × local position among the customer's candidate schedules. x[p][r] corresponds to mathematical variable x[i][s], where i=p+1 and s=candidate_schedules[p][r]; r is not a global schedule number. Each entry must be the integer 0 or 1; booleans are not accepted. When status=\"infeasible\", null.",
+   "example": "[[1]]",
+   "completeness": "A feasible result must give a value for every candidate schedule of every customer, including 0 for unselected ones; each row has exactly one 1; customers or candidates must not be omitted, and the order of the input candidates must not be changed. The schedule selected in x must match the visits in y exactly on all days. A feasible result with N=0 is [], not null."
+  },
+  {
+   "key": "y",
+   "business": "Gives each vehicle's binary direct-travel decision over all node pairs on each day, fully corresponding to model variable y[i][j][k][t], which also determines each day's depot route or idle state. Each component equal to 1 contributes the corresponding distance_matrix[i][j] to the minimization objective.",
+   "shape": "When status=\"feasible\", list[list[list[list[int]]]] with strict shape (N+1)×(N+1)×K×T, axes in order: origin node i × destination node j × vehicle 0-based position h × day t. JSON component y[i][j][h][t] corresponds to mathematical variable y[i][j][k][t], where k=h+1; nodes i, j and day t all use 0-based numbering directly. Each entry must be the integer 0 or 1; booleans are not accepted. When status=\"infeasible\", null.",
+   "example": "[[[[0], [0]], [[1], [0]]], [[[1], [0]], [[0], [0]]]]",
+   "completeness": "A feasible result must give all four-dimensional components; a sparse arc list, route list or default 0 must not be used instead. Self-loop components of all nodes are 0, including the depot. On each service day of the schedule selected in x, each customer has exactly one incoming arc from another node and is served by exactly one vehicle; on other days it has no incoming arc. For each vehicle, each day and each node, the number of entries equals the number of exits. Each vehicle makes at most one non-empty route per day, departing from and returning to the depot; standalone customer cycles are forbidden; the total demand of customers visited by the vehicle that day does not exceed Q, and equality with Q is allowed. All travel components of an idle vehicle on that day must be 0. When N=0, an all-zero array of shape 1×1×K×T must still be submitted."
+  },
+  {
+   "key": "u",
+   "business": "Gives the continuous cumulative load component for each customer, each vehicle and each day, fully corresponding to model variable u[i][k][t], in the same unit as demands and vehicle_capacity. At actual visits it must be the exact cumulative served demand since leaving the depot.",
+   "shape": "When status=\"feasible\", list[list[list[float]]] (elements are finite JSON numbers; integer notation allowed) with strict shape N×K×T, axes in order: customer 0-based position p × vehicle 0-based position h × day t. JSON component u[p][h][t] corresponds to mathematical variable u[i][k][t], where i=p+1 and k=h+1; there is no depot placeholder entry. When status=\"infeasible\", null.",
+   "example": "[[[2.0], [2.0]]]",
+   "completeness": "A feasible result must submit all components, including the components of customers not visited by the corresponding vehicle on the corresponding day. Every u[p][h][t] must be at least demands[p] and at most vehicle_capacity; unvisited components must not be set to zero or omitted either. Along an actual route, u at the first customer equals that customer's own demand, and u at each subsequent customer exactly equals u at the previous customer plus the current customer's demand, thus equaling the cumulative demand served by the vehicle that day since leaving the depot; accumulation starts from 0 separately for each day and each vehicle. Values at unvisited positions do not represent actual served quantities, but must satisfy all relevant load constraints of the original model. A feasible result with N=0 is [], not null."
+  }
+ ]
+}

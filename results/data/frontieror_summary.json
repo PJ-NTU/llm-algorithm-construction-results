@@ -1,0 +1,72 @@
+[
+ {
+  "method": "One-shot",
+  "execution": 0.8,
+  "feasibility": 0.45,
+  "solution_quality": 0.18,
+  "qte": 0.15,
+  "source": "FrontierOR (Kong et al., 2026), Table 3",
+  "tasks": 20,
+  "instances": null,
+  "execution_count": null,
+  "feasibility_count": null,
+  "quality_count": null,
+  "qte_count": null
+ },
+ {
+  "method": "EoH",
+  "execution": 0.78,
+  "feasibility": 0.72,
+  "solution_quality": 0.43,
+  "qte": 0.33,
+  "source": "FrontierOR (Kong et al., 2026), Table 3",
+  "tasks": 20,
+  "instances": null,
+  "execution_count": null,
+  "feasibility_count": null,
+  "quality_count": null,
+  "qte_count": null
+ },
+ {
+  "method": "OpenEvolve",
+  "execution": 1.0,
+  "feasibility": 0.92,
+  "solution_quality": 0.61,
+  "qte": 0.49,
+  "source": "FrontierOR (Kong et al., 2026), Table 3",
+  "tasks": 20,
+  "instances": null,
+  "execution_count": null,
+  "feasibility_count": null,
+  "quality_count": null,
+  "qte_count": null
+ },
+ {
+  "method": "CORAL",
+  "execution": 1.0,
+  "feasibility": 1.0,
+  "solution_quality": 0.67,
+  "qte": 0.5,
+  "source": "FrontierOR (Kong et al., 2026), Table 3",
+  "tasks": 20,
+  "instances": null,
+  "execution_count": null,
+  "feasibility_count": null,
+  "quality_count": null,
+  "qte_count": null
+ },
+ {
+  "method": "Prototype",
+  "execution": 1.0,
+  "feasibility": 1.0,
+  "solution_quality": 0.88,
+  "qte": 0.88,
+  "source": "This work (per-instance data)",
+  "tasks": 20,
+  "instances": 100,
+  "execution_count": "20/20",
+  "feasibility_count": "100/100",
+  "quality_count": "84/95",
+  "qte_count": "84/95"
+ }
+]

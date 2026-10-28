@@ -1,0 +1,50 @@
+{
+ "problem_type": "routing",
+ "decisions": [
+  {
+   "business": "The task sequence handled by each crew (in order of execution)",
+   "key": "crew_routes",
+   "shape": "list[list[int]]",
+   "example": [
+    [
+     0,
+     3,
+     5
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     2
+    ],
+    []
+   ],
+   "completeness": "List the task paths of all K crews; a crew with no assigned tasks gets an empty list"
+  },
+  {
+   "business": "The starting task index of each crew's duty period",
+   "key": "start_tasks",
+   "shape": "list[int]",
+   "example": [
+    0,
+    1,
+    2,
+    -1
+   ],
+   "completeness": "List the starting tasks of all K crews; unused crews are marked -1"
+  },
+  {
+   "business": "The ending task index of each crew's duty period",
+   "key": "end_tasks",
+   "shape": "list[int]",
+   "example": [
+    5,
+    4,
+    2,
+    -1
+   ],
+   "completeness": "List the ending tasks of all K crews; unused crews are marked -1"
+  }
+ ]
+}

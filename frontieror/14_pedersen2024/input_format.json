@@ -1,0 +1,12 @@
+{
+ "node_types": "list[str], length n, defining node indices 0,…,n−1; the i-th entry must be \"substation\", \"turbine\", or \"steiner\", denoting a substation, a candidate turbine site, and a Steiner routing point, respectively.",
+ "node_coordinates": "list[list[float]], shape n×d; row i is the spatial coordinate of node i, and the columns correspond in order to axes 0,…,d−1 of the input coordinate system. All nodes use the same coordinate system and the spatial unit specified by the instance; coordinates are node attributes only, and edge feasibility and costs are not derived from them.",
+ "installation_costs": "list[float], length n; the i-th entry is the turbine installation cost at node i, in the same currency unit as cable costs. Candidate turbine sites take positive values; substations and Steiner nodes must be 0.",
+ "annual_energy_yields": "list[float], length n; the i-th entry is the annual energy yield after building a turbine at node i, in the same energy/year unit as minimum_energy_quota. Candidate turbine sites take positive values; substations and Steiner nodes must be 0.",
+ "node_scenic_impacts": "list[float], length n; the i-th entry is the scenic impact of building a turbine at node i, in the same instance scenic impact unit as edge scenic impacts. Candidate turbine sites take positive values; substations and Steiner nodes must be 0.",
+ "edges": "list[list[int]], shape m×2, defining edge indices 0,…,m−1; edges[e]=[u,v] denotes one undirected feasible cable connection between nodes u and v, with both endpoints using 0-based node indices. Zero-cost, zero-scenic-impact edges between every pair of distinct substations must also be listed here.",
+ "edge_cable_costs": "list[float], length m; the e-th entry is the nonnegative cost of laying the cable segment corresponding to edges[e], in the same currency unit as installation_costs. Edges connecting two substations must be 0.",
+ "edge_scenic_impacts": "list[float], length m; the e-th entry is the nonnegative scenic impact of laying the cable segment corresponding to edges[e], in the same scenic impact unit as node_scenic_impacts. Edges connecting two substations must be 0.",
+ "minimum_energy_quota": "float, nonnegative minimum annual energy yield Q that the built turbines must reach, in the same unit as annual_energy_yields.",
+ "alpha": "float, dimensionless weight in the closed interval [0,1]; the objective is computed directly as alpha×total financial cost+(1−alpha)×total scenic impact, without additional normalization."
+}

@@ -1,0 +1,9 @@
+# Algorithms, checkers and evaluation harnesses
+numpy==2.5.3
+pulp==3.3.2
+scipy==1.18.1  # MILP/LP (HiGHS) used by some algorithms when available
+mip==1.17.6  # used by some algorithms when available
+networkx==3.5  # official CO-Bench data of maximal_independent_set (pickled graphs)
+cbcbox==2.929; sys_platform == 'darwin' and platform_machine == 'arm64'  # native CBC; run setup_runtime.py after installing
+# Downloading the official benchmark data
+huggingface_hub>=0.24

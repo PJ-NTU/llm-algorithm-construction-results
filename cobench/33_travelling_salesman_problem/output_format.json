@@ -1,0 +1,17 @@
+{
+ "problem_type": "routing",
+ "decisions": [
+  {
+   "business": "The order in which the drone visits the targets (including the start point), forming a closed loop that departs from and returns to the start point",
+   "key": "tour",
+   "shape": "list[int]",
+   "example": [
+    0,
+    3,
+    1,
+    2
+   ],
+   "completeness": "List all N+1 nodes (start point 0 plus N targets), with the start point first and every other target appearing exactly once; the return to the start point at the end is implicit"
+  }
+ ]
+}

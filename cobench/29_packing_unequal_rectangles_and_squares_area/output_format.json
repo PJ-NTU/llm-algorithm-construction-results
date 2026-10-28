@@ -1,0 +1,33 @@
+{
+ "problem_type": "Rectangle packing into a circular container with a global 90-degree rotation permission, a mixed discrete-continuous geometric packing maximization problem. The sole objective is to maximize sum(items[i][0]*items[i][1]*alpha[i], i=0,...,n-1), i.e., the total area of the packed items; the area unit is the square of the input length unit; there is no secondary objective, and any solutions tied for maximum area are all acceptable. A complete solution is a JSON object containing exactly the four keys alpha, x, y, r; the four arrays share the 0-based item index and must satisfy all hard constraints below; penalties are not allowed as a substitute. When n=0, all four arrays are [] and the area is zero.",
+ "decisions": [
+  {
+   "key": "alpha",
+   "business": "Which items to select and pack. alpha[i]=1 means item i is packed into the circular container; alpha[i]=0 means it is not packed. Each packed item contributes an area of L_i*W_i and each unpacked item contributes zero; any subset may be selected, including the empty subset.",
+   "shape": "list[int], length exactly n; each entry must be 0 or 1; index i=0,...,n-1 corresponds one-to-one with items; dimensionless.",
+   "example": "[1, 0]",
+   "completeness": "A selection value must be provided for every candidate item; do not list only the packed items. When alpha[i]=1, the item must satisfy the in-circle containment and the separation conditions between selected items specified under x and y; when alpha[i]=0, x[i]=-1, y[i]=-1 and r[i]=0 must all hold. Packing nothing is a feasible solution for valid input, but does not necessarily attain the maximum total area. When n=0 it must be []."
+  },
+  {
+   "key": "x",
+   "business": "Determines the x-coordinate of each item's center. For an unpacked item this entry is not a free position and must use the fixed placeholder value -1. Item edges are always parallel to the coordinate axes.",
+   "shape": "list[float] (JSON number; integer notation allowed), length exactly n; each entry is a real number; index i corresponds to items[i]; the unit is the same as the input side lengths, radius and center coordinates.",
+   "example": "[0.0, -1.0]",
+   "completeness": "One entry must be provided for every candidate item; unpacked items must not be omitted either, and when alpha[i]=0, x[i] must equal -1. Define w_i=(1-r[i])*L_i+r[i]*W_i and h_i=(1-r[i])*W_i+r[i]*L_i, used only as effective-size expressions; they add no output fields. For every item with alpha[i]=1 and all four combinations of s and t each independently taking -1 or 1, (x[i]+s*w_i/2-cx)^2+(y[i]+t*h_i/2-cy)^2<=R^2 must hold, i.e., all four corners lie inside the circle or on its boundary; checking only the item center is not sufficient. Unpacked items are not subject to this containment condition. Together with y, the pairwise item separation condition must also be satisfied. When n=0 it must be []."
+  },
+  {
+   "key": "y",
+   "business": "Determines the y-coordinate of each item's center, which together with x determines the center position. For an unpacked item this entry must use the fixed placeholder value -1.",
+   "shape": "list[float] (JSON number; integer notation allowed), length exactly n; each entry is a real number; index i corresponds to items[i]; the unit is the same as the input side lengths, radius and center coordinates.",
+   "example": "[0.0, -1.0]",
+   "completeness": "One entry must be provided for every candidate item; unpacked items must not be omitted either, and when alpha[i]=0, y[i] must equal -1. Together with x, it must satisfy all of the four-corner containment conditions specified there. For every item pair with i<j and alpha[i]=alpha[j]=1, abs(x[i]-x[j])>=(w_i+w_j)/2 or abs(y[i]-y[j])>=(h_i+h_j)/2 must hold, with at least one direction satisfied; w and h are the effective sizes defined in the x entry. Items may touch at edges or corners, but their interiors must not overlap, and no extra gap is required. If either item of a pair is unpacked, the pair is not subject to this separation condition; when n<2 there are no pairs to check. When n=0 it must be []."
+  },
+  {
+   "key": "r",
+   "business": "Determines whether each item is actually rotated 90 degrees. When r[i]=0, the width along the x-axis is L_i and the height along the y-axis is W_i; when r[i]=1, the width along the x-axis is W_i and the height along the y-axis is L_i. Rotation does not change the item's area.",
+   "shape": "list[int], length exactly n; each entry must be 0 or 1; index i=0,...,n-1 corresponds one-to-one with items; dimensionless.",
+   "example": "[1, 0]",
+   "completeness": "A rotation value must be provided for every candidate item. r[i]<=rotation_enabled must hold for all i; hence when the global permission is 0 the entire r array must be all 0, and when the permission is 1 packed items may each choose 0 or 1. Regardless of whether the permission is on, r[i] must be 0 when alpha[i]=0. Other angles must not be used in place of the 0/1 rotation decision. When n=0 it must be []."
+  }
+ ]
+}

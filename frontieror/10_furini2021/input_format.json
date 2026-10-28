@@ -1,0 +1,1 @@
+{"actual_edge_density": "float", "budget_mu_percent": "any", "budget_rule": "str", "edges": "[[int, ...], ...]", "generation_seed": "int", "generation_style": "str", "interdiction_budget_k": "int", "num_edges": "int", "num_vertices": "int", "problem": "str", "target_edge_density": "float", "vertices": "[int, ...]"}

@@ -1,0 +1,12 @@
+{
+ "num_periods": "int, number of planning periods H, must be a positive integer; period indices t=0,…,H-1 in the input arrays correspond to periods 1,…,H in the mathematical model.",
+ "num_customers": "int, number of customers N, must be a positive integer; location 0 always denotes the supplier, and locations 1,…,N denote customers.",
+ "num_vehicles": "int, number of homogeneous vehicles M available in each period; vehicle array indices k=0,…,M-1 denote the vehicle labels.",
+ "vehicle_capacity": "float, maximum load Q of each vehicle on a single route in a single period, in units of product quantity, must be greater than 0.",
+ "supplier_production": "list[float], length H; supplier_production[t] is the quantity of product p_t produced by the supplier after the start of period t and before vehicle loading.",
+ "customer_demand": "list[list[float]], shape N×H, outer axis is customers and inner axis is periods; customer_demand[i-1][t] is the demand d_it of customer i in period t, with customers numbered 1,…,N.",
+ "inventory_capacity": "list[float], length N+1; inventory_capacity[0] is the supplier inventory capacity U_0, inventory_capacity[i] is the inventory capacity U_i of customer i, in units of product quantity.",
+ "initial_inventory": "list[float], length N+1; initial_inventory[0] is the supplier's initial inventory, initial_inventory[i] is the initial inventory of customer i before delivery in the first period; each entry must lie between 0 and the corresponding inventory capacity.",
+ "holding_cost": "list[float], length N+1; holding_cost[ℓ] is the end-of-period inventory holding cost per unit of product per period at location ℓ, where ℓ=0 is the supplier and ℓ=1,…,N are customers.",
+ "travel_cost": "list[list[float]], shape (N+1)×(N+1); travel_cost[i][j] is the cost for a vehicle to travel directly from location i to location j once. The matrix must be symmetric and the main diagonal should be 0; location 0 is the supplier."
+}

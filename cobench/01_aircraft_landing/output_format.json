@@ -1,0 +1,38 @@
+{
+ "problem_type": "scheduling",
+ "decisions": [
+  {
+   "business": "The landing runway assigned to each flight",
+   "key": "runway_assignment",
+   "shape": "dict[str, int]",
+   "example": {
+    "UA123": 1,
+    "CA456": 2,
+    "DL789": 1
+   },
+   "completeness": "List all P flights and their corresponding runway numbers"
+  },
+  {
+   "business": "The actual landing time determined for each flight",
+   "key": "landing_times",
+   "shape": "dict[str, float]",
+   "example": {
+    "UA123": 540.5,
+    "CA456": 552.0,
+    "DL789": 565.0
+   },
+   "completeness": "List the landing times of all P flights"
+  },
+  {
+   "business": "The landing order among flights",
+   "key": "landing_sequence",
+   "shape": "list[str]",
+   "example": [
+    "UA123",
+    "CA456",
+    "DL789"
+   ],
+   "completeness": "List of all flight IDs sorted by landing time from earliest to latest"
+  }
+ ]
+}

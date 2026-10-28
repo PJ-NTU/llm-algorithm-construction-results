@@ -1,0 +1,18 @@
+{
+ "problem_type": "assignment",
+ "decisions": [
+  {
+   "business": "The machine assigned to each job",
+   "key": "assignments",
+   "shape": "dict[str, int]",
+   "example": {
+    "0": 2,
+    "1": 0,
+    "2": 2,
+    "3": 1,
+    "4": 4
+   },
+   "completeness": "Include all jobs from 0 to num_jobs-1 as keys, with their corresponding machine index (0 to num_machines-1) as the value."
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "problem_type": "scheduling",
+ "decisions": [
+  {
+   "business": "Planned start time of each activity (including the dummy start and end activities)",
+   "key": "start_times",
+   "shape": "dict[str, int]",
+   "example": {
+    "0": 0,
+    "1": 5,
+    "2": 12,
+    "3": 8,
+    "4": 15,
+    "5": 20,
+    "6": 22,
+    "7": 25,
+    "8": 30,
+    "9": 35,
+    "10": 40,
+    "11": 45
+   },
+   "completeness": "Must include all activity IDs from 0 to n+1, where 0 is the project start and n+1 is the project end"
+  }
+ ]
+}

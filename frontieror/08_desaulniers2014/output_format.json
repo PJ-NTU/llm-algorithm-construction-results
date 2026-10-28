@@ -1,0 +1,26 @@
+{
+ "problem_type": "Finite-horizon single-supplier, single-product, homogeneous limited-fleet Production Inventory Routing Problem (partial replenishment allowed, stockouts forbidden)",
+ "decisions": [
+  {
+   "key": "routes",
+   "business": "Visiting route of each vehicle in each period; a route lists location numbers in actual travel order, with the supplier numbered 0 and customers numbered 1,…,N.",
+   "shape": "list[list[list[int]]], shape H×M×variable route length; routes[t][k] is the route of vehicle k in period t, an unused vehicle is denoted by the empty list [], and a used route must have the form [0,customers…,0].",
+   "example": "[[[0,1,3,0],[0,2,0]],[[],[0,1,2,0]]]",
+   "completeness": "Exactly M vehicle slots must be provided for every period. Each non-empty route may contain supplier 0 only at its start and end, must contain at least one customer, and its customers must not form a subtour detached from the supplier; the same customer appears at most once across all routes in the same period."
+  },
+  {
+   "key": "deliveries",
+   "business": "Quantity of product loaded and actually delivered by each vehicle to each customer in each period, corresponding to q_ikt in the model.",
+   "shape": "list[list[list[float]]], fixed shape H×M×N; deliveries[t][k][i-1] is the delivery quantity from vehicle k to customer i in period t.",
+   "example": "[[[4.0,0.0,3.0],[0.0,2.0,0.0]],[[0.0,0.0,0.0],[1.0,5.0,0.0]]]",
+   "completeness": "One nonnegative number must be provided for every period, vehicle, and customer. The delivery quantity must be 0 when the customer is not on the corresponding vehicle route; all delivery quantities of an unused vehicle must be 0. The total delivery of each vehicle in each period must not exceed vehicle_capacity, and the customer inventory after delivery must not exceed capacity and must be sufficient to cover the current-period demand. Visiting a customer does not require a positive delivery quantity, nor does it require filling up the inventory."
+  },
+  {
+   "key": "end_inventory",
+   "business": "Inventory of the supplier and all customers at the end of each period; customer inventory is counted after the current-period delivery and demand are completed, and supplier inventory is counted after the current-period production and vehicle loading are completed.",
+   "shape": "list[list[float]], fixed shape H×(N+1); end_inventory[t][0] is the supplier's end-of-period-t inventory, end_inventory[t][i] is the end-of-period-t inventory of customer i.",
+   "example": "[[6.0,3.0,2.0,2.0],[5.0,2.0,5.0,1.0]]",
+   "completeness": "Must cover all periods and all locations, and must balance exactly period by period with initial_inventory, supplier_production, customer_demand, and deliveries. The supplier's end-of-period inventory must lie within its capacity; for each customer, the previous end-of-period inventory plus the total current-period delivery must lie between the current-period demand and the customer capacity, so the customer end-of-period inventory must not be negative."
+  }
+ ]
+}

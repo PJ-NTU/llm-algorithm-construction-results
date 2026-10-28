@@ -1,0 +1,102 @@
+[
+ {
+  "method": "Prototype",
+  "group": "This work",
+  "average_score": 0.97,
+  "valid_rate": 1.0,
+  "survival_rate": 0.712,
+  "source": "This work (per-instance data)",
+  "problems": 36,
+  "instances": 6155
+ },
+ {
+  "method": "LACE",
+  "group": "LLM-based",
+  "average_score": 0.945,
+  "valid_rate": 0.944,
+  "survival_rate": 0.623,
+  "source": "LACE paper (Gong et al., Nat. Mach. Intell. 2026)",
+  "problems": 36,
+  "instances": null
+ },
+ {
+  "method": "EoH-S",
+  "group": "LLM-based",
+  "average_score": 0.87,
+  "valid_rate": 0.611,
+  "survival_rate": 0.45,
+  "source": "LACE paper (Gong et al., Nat. Mach. Intell. 2026), supplementary overall comparison table",
+  "problems": 36,
+  "instances": null
+ },
+ {
+  "method": "HeurAgenix",
+  "group": "LLM-based",
+  "average_score": 0.855,
+  "valid_rate": 0.583,
+  "survival_rate": 0.42,
+  "source": "LACE paper (Gong et al., Nat. Mach. Intell. 2026), supplementary overall comparison table",
+  "problems": 36,
+  "instances": null
+ },
+ {
+  "method": "FunSearch",
+  "group": "LLM-based",
+  "average_score": 0.842,
+  "valid_rate": 0.5,
+  "survival_rate": 0.426,
+  "source": "CO-Bench (Sun et al., AAAI 2026), Figure 3",
+  "problems": 36,
+  "instances": null
+ },
+ {
+  "method": "EoH",
+  "group": "LLM-based",
+  "average_score": 0.84,
+  "valid_rate": 0.555,
+  "survival_rate": 0.39,
+  "source": "CO-Bench (Sun et al., AAAI 2026), Figure 3",
+  "problems": 36,
+  "instances": null
+ },
+ {
+  "method": "Greedy Refine",
+  "group": "LLM-based",
+  "average_score": 0.84,
+  "valid_rate": 0.555,
+  "survival_rate": 0.448,
+  "source": "CO-Bench (Sun et al., AAAI 2026), Figure 3",
+  "problems": 36,
+  "instances": null
+ },
+ {
+  "method": "ReEvo",
+  "group": "LLM-based",
+  "average_score": 0.774,
+  "valid_rate": 0.555,
+  "survival_rate": 0.32,
+  "source": "CO-Bench (Sun et al., AAAI 2026), Figure 3",
+  "problems": 36,
+  "instances": null
+ },
+ {
+  "method": "o3 Mini Direct",
+  "group": "Bare LLM",
+  "average_score": 0.571,
+  "valid_rate": 0.361,
+  "survival_rate": 0.19,
+  "source": "CO-Bench (Sun et al., AAAI 2026), Figure 3",
+  "problems": 36,
+  "instances": null
+ },
+ {
+  "method": "Classical solver",
+  "group": "Classical",
+  "average_score": 0.797,
+  "valid_rate": 0.611,
+  "survival_rate": 0.394,
+  "source": "CO-Bench (Sun et al., AAAI 2026), Figure 3",
+  "problems": 36,
+  "instances": null
+ }
+]

@@ -1,0 +1,26 @@
+{
+ "problem_type": "Set Partitioning: select some of the n candidate options so that each of the m tasks is covered by exactly one selected option, minimizing the total cost of the selected options (minimize Σ costs[j]·x[j]).",
+ "decisions": [
+  {
+   "key": "feasible",
+   "business": "Whether a selection of options satisfying \"every task is covered exactly once\" was found. true means a feasible solution is given; false reports that the instance has no feasible solution.",
+   "shape": "bool scalar",
+   "example": "true",
+   "completeness": "Required. When the instance has no feasible partition (e.g., some task is not in any covers[j], or n=0 and m>0), set false; otherwise set true and give the complete selection in x."
+  },
+  {
+   "key": "x",
+   "business": "Whether each candidate option is selected: x[j]=1 means option j is selected; x[j]=0 means it is not.",
+   "shape": "When feasible=true, list[int] of length n, indexed by option index 0..n-1, each element 0 or 1; when feasible=false, null.",
+   "example": "For n=3, m=3, costs=[2.5, 1.0, 3.0], covers=[[0,1],[2],[1,2]]: x=[1, 1, 0] (select options 0 and 1; tasks 0 and 1 are covered by option 0, task 2 by option 1)",
+   "completeness": "When feasible=true, the length must be exactly n and each element must be 0 or 1. For each task r∈{0..m-1}, there must be exactly one option j with x[j]=1 and r∈covers[j]. When n=0 it is []; when m=0, all zeros is optimal. When feasible=false it must be null, with no option selection given."
+  },
+  {
+   "key": "total_cost",
+   "business": "Total cost of the selected options Σ_j costs[j]·x[j] (unit: currency units), i.e., the objective value being minimized.",
+   "shape": "When feasible=true, a float scalar; when feasible=false, null.",
+   "example": "3.5",
+   "completeness": "Required when feasible=true, and must differ from Σ costs[j]·x[j] recomputed from x by at most 1e-6 (absolute tolerance). null when feasible=false."
+  }
+ ]
+}

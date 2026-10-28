@@ -1,0 +1,31 @@
+{
+ "schema_fields": [
+  "n",
+  "n_jobs",
+  "n_machines",
+  "ptimes"
+ ],
+ "input_schema": "{\"n\": int, \"n_jobs\": int, \"n_machines\": int, \"ptimes\": [[int, ...], ...]}",
+ "smoke_instance_example": {
+  "n": 9,
+  "n_jobs": 3,
+  "n_machines": 3,
+  "ptimes": [
+   [
+    8,
+    8,
+    5
+   ],
+   [
+    7,
+    8,
+    8
+   ],
+   [
+    7,
+    8,
+    7
+   ]
+  ]
+ }
+}

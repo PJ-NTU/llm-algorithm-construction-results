@@ -1,0 +1,1 @@
+{"n": "int", "m": "int", "profit": "[float, ...]", "weights": "[[float, ...], ...]", "capacity": "[float, ...]"}

@@ -1,0 +1,101 @@
+task_id,task,problem,sense,instance,prototype_objective,best_algorithm,best_algorithm_file,gurobi_reference,reference_valid,signed_gap,verdict,quality_pass,feasible_algorithms,algorithms
+01_adulyasak2015,adulyasak2015,Stochastic production routing,min,large_1,7487.021472175748,r2_O1_1.py,frontieror/01_adulyasak2015/algorithms/r2_O1_1.py,24264.431698905697,True,-0.6914404769466163,better,True,5,5
+01_adulyasak2015,adulyasak2015,Stochastic production routing,min,large_2,34964.96328990083,r2_O1_1.py,frontieror/01_adulyasak2015/algorithms/r2_O1_1.py,159840.11349897826,True,-0.7812503849972283,better,True,5,5
+01_adulyasak2015,adulyasak2015,Stochastic production routing,min,large_3,20593.094886266717,r2_O1_1.py,frontieror/01_adulyasak2015/algorithms/r2_O1_1.py,47553.855849755346,True,-0.5669521531265552,better,True,5,5
+01_adulyasak2015,adulyasak2015,Stochastic production routing,min,large_4,7510.079412559333,r2_O4_4.py,frontieror/01_adulyasak2015/algorithms/r2_O4_4.py,24414.72888062327,True,-0.6923955433099361,better,True,5,5
+01_adulyasak2015,adulyasak2015,Stochastic production routing,min,large_5,7630.9396220266635,r2_O1_1.py,frontieror/01_adulyasak2015/algorithms/r2_O1_1.py,48829.45785608655,True,-0.8437226224276935,better,True,5,5
+02_archetti2007,archetti2007,Inventory routing,min,large_1,29377.9977,alg_f5b99b8506,frontieror/02_archetti2007/algorithms/alg_f5b99b8506.py,14586.0229,False,,reference_invalid,,6,10
+02_archetti2007,archetti2007,Inventory routing,min,large_2,39249.1193,alg_f5b99b8506,frontieror/02_archetti2007/algorithms/alg_f5b99b8506.py,38884.9362,True,0.009365660216770577,worse,True,6,10
+02_archetti2007,archetti2007,Inventory routing,min,large_3,72941.7161,alg_f5b99b8506,frontieror/02_archetti2007/algorithms/alg_f5b99b8506.py,72941.7161,True,0.0,tie,True,10,10
+02_archetti2007,archetti2007,Inventory routing,min,large_4,43551.4463,alg_f5b99b8506,frontieror/02_archetti2007/algorithms/alg_f5b99b8506.py,43425.0847,True,0.002909875729039253,worse,True,10,10
+02_archetti2007,archetti2007,Inventory routing,min,large_5,27752.1418,alg_de761d542c,frontieror/02_archetti2007/algorithms/alg_de761d542c.py,27511.0846,True,0.008762184534156931,worse,True,7,10
+03_armbruster2012,armbruster2012,Bidirectional-capacity min-cut graph partitioning,min,large_1,34670.0,r0_O0_0.py,frontieror/03_armbruster2012/algorithms/r0_O0_0.py,51158.0,True,-0.32229563313655735,better,True,4,5
+03_armbruster2012,armbruster2012,Bidirectional-capacity min-cut graph partitioning,min,large_2,15262.0,r0_O0_3.py,frontieror/03_armbruster2012/algorithms/r0_O0_3.py,42273.0,True,-0.6389657701133111,better,True,4,5
+03_armbruster2012,armbruster2012,Bidirectional-capacity min-cut graph partitioning,min,large_3,13552.0,r0_O0_4.py,frontieror/03_armbruster2012/algorithms/r0_O0_4.py,9245.0,True,0.4658734451054624,worse,False,5,5
+03_armbruster2012,armbruster2012,Bidirectional-capacity min-cut graph partitioning,min,large_4,13869.0,r0_O0_4.py,frontieror/03_armbruster2012/algorithms/r0_O0_4.py,11770.0,True,0.17833474936278676,worse,False,5,5
+03_armbruster2012,armbruster2012,Bidirectional-capacity min-cut graph partitioning,min,large_5,8720.0,r0_O0_0.py,frontieror/03_armbruster2012/algorithms/r0_O0_0.py,918.0,True,8.498910675381264,worse,False,5,5
+04_bard2002,bard2002,Vehicle routing with time windows,min,large_1,15.0,alg_2afbff0510,frontieror/04_bard2002/algorithms/alg_2afbff0510.py,16.0,True,-0.0625,better,True,10,10
+04_bard2002,bard2002,Vehicle routing with time windows,min,large_2,15.0,alg_d46b0e0195,frontieror/04_bard2002/algorithms/alg_d46b0e0195.py,18.0,True,-0.16666666666666666,better,True,10,10
+04_bard2002,bard2002,Vehicle routing with time windows,min,large_3,12.0,alg_2afbff0510,frontieror/04_bard2002/algorithms/alg_2afbff0510.py,15.0,True,-0.2,better,True,10,10
+04_bard2002,bard2002,Vehicle routing with time windows,min,large_4,4.0,alg_2afbff0510,frontieror/04_bard2002/algorithms/alg_2afbff0510.py,5.0,True,-0.2,better,True,10,10
+04_bard2002,bard2002,Vehicle routing with time windows,min,large_5,3.0,alg_2afbff0510,frontieror/04_bard2002/algorithms/alg_2afbff0510.py,5.0,True,-0.4,better,True,10,10
+05_bertsimas2022,bertsimas2022,Cardinality-constrained MIQP portfolio selection,min,large_1,0.035471235572016674,r1_O1_1.py,frontieror/05_bertsimas2022/algorithms/r1_O1_1.py,0.036036636048539766,True,-0.01568960198619879,better,True,5,5
+05_bertsimas2022,bertsimas2022,Cardinality-constrained MIQP portfolio selection,min,large_2,0.016542259175269938,r2_O1_1.py,frontieror/05_bertsimas2022/algorithms/r2_O1_1.py,0.016933536233414384,True,-0.023106636012172842,better,True,4,5
+05_bertsimas2022,bertsimas2022,Cardinality-constrained MIQP portfolio selection,min,large_3,0.052687937791924766,r1_O1_1.py,frontieror/05_bertsimas2022/algorithms/r1_O1_1.py,0.05381016052523079,True,-0.020855219950139944,better,True,5,5
+05_bertsimas2022,bertsimas2022,Cardinality-constrained MIQP portfolio selection,min,large_4,1.5669624938195847,r1_O1_1.py,frontieror/05_bertsimas2022/algorithms/r1_O1_1.py,1.5672979250999977,True,-0.0002140188377978685,better,True,5,5
+05_bertsimas2022,bertsimas2022,Cardinality-constrained MIQP portfolio selection,min,large_5,1.5818416019257526,r2_O1_1.py,frontieror/05_bertsimas2022/algorithms/r2_O1_1.py,1.5821259351622408,True,-0.00017971593168970783,better,True,4,5
+06_bront2009,bront2009,Choice-based network revenue management,max,large_1,243985.5631,alg_cc59a1b8c4,frontieror/06_bront2009/algorithms/alg_cc59a1b8c4.py,243985.5634,True,1.2295810049933282e-09,tie,True,10,10
+06_bront2009,bront2009,Choice-based network revenue management,max,large_2,298455.0082,alg_cc59a1b8c4,frontieror/06_bront2009/algorithms/alg_cc59a1b8c4.py,298455.0086,True,1.3402355714360778e-09,tie,True,10,10
+06_bront2009,bront2009,Choice-based network revenue management,max,large_3,336390.5343,alg_cc59a1b8c4,frontieror/06_bront2009/algorithms/alg_cc59a1b8c4.py,336390.5347,True,1.1890941561590274e-09,tie,True,10,10
+06_bront2009,bront2009,Choice-based network revenue management,max,large_4,357579.6239,alg_cc59a1b8c4,frontieror/06_bront2009/algorithms/alg_cc59a1b8c4.py,357579.6243,True,1.1186320243554786e-09,tie,True,10,10
+06_bront2009,bront2009,Choice-based network revenue management,max,large_5,365988.6962,alg_cc59a1b8c4,frontieror/06_bront2009/algorithms/alg_cc59a1b8c4.py,365988.6964,True,5.46464990494964e-10,tie,True,10,10
+07_carvalho1999,carvalho1999,Bin packing (minimum number of bins),min,large_1,8409.0,alg_9775d125b4,frontieror/07_carvalho1999/algorithms/alg_9775d125b4.py,8334.0,True,0.008999280057595392,worse,True,9,10
+07_carvalho1999,carvalho1999,Bin packing (minimum number of bins),min,large_2,10016.0,alg_9775d125b4,frontieror/07_carvalho1999/algorithms/alg_9775d125b4.py,10010.0,True,0.0005994005994005994,worse,True,9,10
+07_carvalho1999,carvalho1999,Bin packing (minimum number of bins),min,large_3,12501.0,alg_1ef670a6d9,frontieror/07_carvalho1999/algorithms/alg_1ef670a6d9.py,12501.0,True,0.0,tie,True,9,10
+07_carvalho1999,carvalho1999,Bin packing (minimum number of bins),min,large_4,9995.0,alg_1ef670a6d9,frontieror/07_carvalho1999/algorithms/alg_1ef670a6d9.py,9995.0,True,0.0,tie,True,9,10
+07_carvalho1999,carvalho1999,Bin packing (minimum number of bins),min,large_5,2849.0,alg_46da8edc0a,frontieror/07_carvalho1999/algorithms/alg_46da8edc0a.py,2849.0,True,0.0,tie,True,9,10
+08_desaulniers2014,desaulniers2014,Production routing,min,large_1,5653.710000000001,r2_O1_1.py,frontieror/08_desaulniers2014/algorithms/r2_O1_1.py,5355.110000000001,True,0.05575982566184454,worse,False,4,5
+08_desaulniers2014,desaulniers2014,Production routing,min,large_2,5874.73,r2_O1_1.py,frontieror/08_desaulniers2014/algorithms/r2_O1_1.py,6002.539937521255,True,-0.02129264258990238,better,True,4,5
+08_desaulniers2014,desaulniers2014,Production routing,min,large_3,4901.16,r2_O1_1.py,frontieror/08_desaulniers2014/algorithms/r2_O1_1.py,4909.879999999999,True,-0.0017760108190015534,better,True,5,5
+08_desaulniers2014,desaulniers2014,Production routing,min,large_4,5487.9,r2_O1_1.py,frontieror/08_desaulniers2014/algorithms/r2_O1_1.py,5162.29,True,0.06307472071503144,worse,False,5,5
+08_desaulniers2014,desaulniers2014,Production routing,min,large_5,5962.52,r2_O1_1.py,frontieror/08_desaulniers2014/algorithms/r2_O1_1.py,5728.469950059014,True,0.040857340962149095,worse,False,5,5
+09_desaulniers2016,desaulniers2016,Finite-horizon inventory routing,min,large_1,5896.25,r2_O0_0.py,frontieror/09_desaulniers2016/algorithms/r2_O0_0.py,5675.25,True,0.03894101581428131,worse,False,5,5
+09_desaulniers2016,desaulniers2016,Finite-horizon inventory routing,min,large_2,5972.25,r2_O1_1.py,frontieror/09_desaulniers2016/algorithms/r2_O1_1.py,5962.25,True,0.00167721917061512,worse,True,5,5
+09_desaulniers2016,desaulniers2016,Finite-horizon inventory routing,min,large_3,9163.25,r2_O1_1.py,frontieror/09_desaulniers2016/algorithms/r2_O1_1.py,9532.25,True,-0.03871069264864014,better,True,4,5
+09_desaulniers2016,desaulniers2016,Finite-horizon inventory routing,min,large_4,5512.25,r2_O0_0.py,frontieror/09_desaulniers2016/algorithms/r2_O0_0.py,6581.249999999999,True,-0.16243114909781564,better,True,5,5
+09_desaulniers2016,desaulniers2016,Finite-horizon inventory routing,min,large_5,5611.25,r2_O0_0.py,frontieror/09_desaulniers2016/algorithms/r2_O0_0.py,6029.25,True,-0.06932868930629846,better,True,5,5
+10_furini2021,furini2021,Edge-interdiction clique problem,min,large_1,6.0,alg_c99d50ec21,frontieror/10_furini2021/algorithms/alg_c99d50ec21.py,6.0,True,0.0,tie,True,10,10
+10_furini2021,furini2021,Edge-interdiction clique problem,min,large_2,9.0,alg_11a8ff22bf,frontieror/10_furini2021/algorithms/alg_11a8ff22bf.py,9.0,True,0.0,tie,True,9,10
+10_furini2021,furini2021,Edge-interdiction clique problem,min,large_3,9.0,alg_11a8ff22bf,frontieror/10_furini2021/algorithms/alg_11a8ff22bf.py,9.0,True,0.0,tie,True,9,10
+10_furini2021,furini2021,Edge-interdiction clique problem,min,large_4,6.0,alg_c99d50ec21,frontieror/10_furini2021/algorithms/alg_c99d50ec21.py,6.0,True,0.0,tie,True,10,10
+10_furini2021,furini2021,Edge-interdiction clique problem,min,large_5,7.0,alg_11a8ff22bf,frontieror/10_furini2021/algorithms/alg_11a8ff22bf.py,7.0,True,0.0,tie,True,10,10
+11_kobeaga2024,kobeaga2024,Orienteering (score maximization),max,large_1,114.0,r0_O0_0.py,frontieror/11_kobeaga2024/algorithms/r0_O0_0.py,16.0,True,-6.125,better,True,5,5
+11_kobeaga2024,kobeaga2024,Orienteering (score maximization),max,large_2,134.0,r2_O5_5.py,frontieror/11_kobeaga2024/algorithms/r2_O5_5.py,15.0,True,-7.933333333333334,better,True,5,5
+11_kobeaga2024,kobeaga2024,Orienteering (score maximization),max,large_3,94.0,r0_O0_2.py,frontieror/11_kobeaga2024/algorithms/r0_O0_2.py,96.0,True,0.020833333333333332,worse,False,5,5
+11_kobeaga2024,kobeaga2024,Orienteering (score maximization),max,large_4,147.0,r0_O0_0.py,frontieror/11_kobeaga2024/algorithms/r0_O0_0.py,33.0,True,-3.4545454545454546,better,True,5,5
+11_kobeaga2024,kobeaga2024,Orienteering (score maximization),max,large_5,71.0,r0_O0_2.py,frontieror/11_kobeaga2024/algorithms/r0_O0_2.py,10.0,True,-6.1,better,True,5,5
+12_mehrotra1996,mehrotra1996,Graph coloring,min,large_1,82.0,alg_184680af61,frontieror/12_mehrotra1996/algorithms/alg_184680af61.py,82.0,True,0.0,tie,True,10,10
+12_mehrotra1996,mehrotra1996,Graph coloring,min,large_2,170.0,alg_184680af61,frontieror/12_mehrotra1996/algorithms/alg_184680af61.py,170.0,True,0.0,tie,True,10,10
+12_mehrotra1996,mehrotra1996,Graph coloring,min,large_3,35.0,alg_184680af61,frontieror/12_mehrotra1996/algorithms/alg_184680af61.py,36.0,True,-0.027777777777777776,better,True,10,10
+12_mehrotra1996,mehrotra1996,Graph coloring,min,large_4,109.0,alg_e806e1f771,frontieror/12_mehrotra1996/algorithms/alg_e806e1f771.py,107.0,True,0.018691588785046728,worse,False,10,10
+12_mehrotra1996,mehrotra1996,Graph coloring,min,large_5,81.0,alg_184680af61,frontieror/12_mehrotra1996/algorithms/alg_184680af61.py,83.0,True,-0.024096385542168676,better,True,10,10
+13_nagy2015,nagy2015,Split delivery and pickup vehicle routing,min,large_1,13608.0,r1_O1_1.py,frontieror/13_nagy2015/algorithms/r1_O1_1.py,13986.0,True,-0.02702702702702703,better,True,3,5
+13_nagy2015,nagy2015,Split delivery and pickup vehicle routing,min,large_2,3237.0,r1_O1_1.py,frontieror/13_nagy2015/algorithms/r1_O1_1.py,3652.0,True,-0.11363636363636363,better,True,4,5
+13_nagy2015,nagy2015,Split delivery and pickup vehicle routing,min,large_3,12947.0,r1_O1_1.py,frontieror/13_nagy2015/algorithms/r1_O1_1.py,13361.0,True,-0.030985704662824638,better,True,5,5
+13_nagy2015,nagy2015,Split delivery and pickup vehicle routing,min,large_4,3236.0,r0_O0_2.py,frontieror/13_nagy2015/algorithms/r0_O0_2.py,3423.0,True,-0.054630441133508616,better,True,5,5
+13_nagy2015,nagy2015,Split delivery and pickup vehicle routing,min,large_5,13580.0,r2_O4_4.py,frontieror/13_nagy2015/algorithms/r2_O4_4.py,13762.0,True,-0.013224821973550356,better,True,5,5
+14_pedersen2024,pedersen2024,Wind farm quota Steiner tree,min,large_1,3210.9847999999993,r2_O1_1.py,frontieror/14_pedersen2024/algorithms/r2_O1_1.py,3140.9604,True,0.022293945507876934,worse,False,5,5
+14_pedersen2024,pedersen2024,Wind farm quota Steiner tree,min,large_2,3322.49748,r1_O5_5.py,frontieror/14_pedersen2024/algorithms/r1_O5_5.py,3302.00288,True,0.006206717784570797,worse,True,5,5
+14_pedersen2024,pedersen2024,Wind farm quota Steiner tree,min,large_3,3495.1726500000013,r1_O5_5.py,frontieror/14_pedersen2024/algorithms/r1_O5_5.py,3454.7581999999998,True,0.011698199312473324,worse,False,5,5
+14_pedersen2024,pedersen2024,Wind farm quota Steiner tree,min,large_4,3457.8846000000003,r1_O5_5.py,frontieror/14_pedersen2024/algorithms/r1_O5_5.py,3435.8432399999997,True,0.0064151238750929235,worse,True,5,5
+14_pedersen2024,pedersen2024,Wind farm quota Steiner tree,min,large_5,3305.7057999999993,r1_O5_5.py,frontieror/14_pedersen2024/algorithms/r1_O5_5.py,3301.6066,True,0.0012415773581259501,worse,True,5,5
+15_pinnoi1997,pinnoi1997,Assembly line balancing,min,large_1,1.0,r1_O2_2.py,frontieror/15_pinnoi1997/algorithms/r1_O2_2.py,1.0,True,0.0,tie,True,2,5
+15_pinnoi1997,pinnoi1997,Assembly line balancing,min,large_2,7.0,r1_O0_0.py,frontieror/15_pinnoi1997/algorithms/r1_O0_0.py,3.0,False,,reference_invalid,,5,5
+15_pinnoi1997,pinnoi1997,Assembly line balancing,min,large_3,7.0,r0_O0_0.py,frontieror/15_pinnoi1997/algorithms/r0_O0_0.py,7.0,True,0.0,tie,True,5,5
+15_pinnoi1997,pinnoi1997,Assembly line balancing,min,large_4,7.0,r1_O0_0.py,frontieror/15_pinnoi1997/algorithms/r1_O0_0.py,0.0,False,,reference_invalid,,5,5
+15_pinnoi1997,pinnoi1997,Assembly line balancing,min,large_5,6.0,r1_O2_2.py,frontieror/15_pinnoi1997/algorithms/r1_O2_2.py,3.0,False,,reference_invalid,,5,5
+16_roberti2018,roberti2018,Two-echelon CVRP with cluster constraints,min,large_1,1657.0355,alg_01dbb062ff,frontieror/16_roberti2018/algorithms/alg_01dbb062ff.py,1552.312,False,,reference_invalid,,10,10
+16_roberti2018,roberti2018,Two-echelon CVRP with cluster constraints,min,large_2,2024.4812,alg_616dd9360b,frontieror/16_roberti2018/algorithms/alg_616dd9360b.py,2024.4809,True,1.481861349863532e-07,tie,True,10,10
+16_roberti2018,roberti2018,Two-echelon CVRP with cluster constraints,min,large_3,1756.7855,alg_616dd9360b,frontieror/16_roberti2018/algorithms/alg_616dd9360b.py,1756.7855,True,0.0,tie,True,10,10
+16_roberti2018,roberti2018,Two-echelon CVRP with cluster constraints,min,large_4,1764.1721,alg_616dd9360b,frontieror/16_roberti2018/algorithms/alg_616dd9360b.py,1765.4775,True,-0.0007394033625463725,better,True,10,10
+16_roberti2018,roberti2018,Two-echelon CVRP with cluster constraints,min,large_5,1448.2215,alg_616dd9360b,frontieror/16_roberti2018/algorithms/alg_616dd9360b.py,1448.2215,True,0.0,tie,True,10,10
+17_rostami2021,rostami2021,Stochastic single-allocation hub location,min,large_1,559394.638,alg_0b6d096317,frontieror/17_rostami2021/algorithms/alg_0b6d096317.py,559398.2675,True,-6.488221738946842e-06,tie,True,9,10
+17_rostami2021,rostami2021,Stochastic single-allocation hub location,min,large_2,558242.8165,alg_0b6d096317,frontieror/17_rostami2021/algorithms/alg_0b6d096317.py,558242.8165,True,0.0,tie,True,10,10
+17_rostami2021,rostami2021,Stochastic single-allocation hub location,min,large_3,566347.6865,alg_0b6d096317,frontieror/17_rostami2021/algorithms/alg_0b6d096317.py,566347.6865,True,0.0,tie,True,10,10
+17_rostami2021,rostami2021,Stochastic single-allocation hub location,min,large_4,566394.6865,alg_0b6d096317,frontieror/17_rostami2021/algorithms/alg_0b6d096317.py,566394.6865,True,0.0,tie,True,9,10
+17_rostami2021,rostami2021,Stochastic single-allocation hub location,min,large_5,557701.6865,alg_0b6d096317,frontieror/17_rostami2021/algorithms/alg_0b6d096317.py,557701.6865,True,0.0,tie,True,10,10
+18_schwerdfeger2016,schwerdfeger2016,Parallel-machine workload balancing (NSSWD),min,large_1,0.000537341,alg_0eda683e68,frontieror/18_schwerdfeger2016/algorithms/alg_0eda683e68.py,0.000537341,True,0.0,tie,True,10,10
+18_schwerdfeger2016,schwerdfeger2016,Parallel-machine workload balancing (NSSWD),min,large_2,0.000622883,alg_0eda683e68,frontieror/18_schwerdfeger2016/algorithms/alg_0eda683e68.py,0.000622883,True,0.0,tie,True,10,10
+18_schwerdfeger2016,schwerdfeger2016,Parallel-machine workload balancing (NSSWD),min,large_3,0.000577632,alg_0eda683e68,frontieror/18_schwerdfeger2016/algorithms/alg_0eda683e68.py,0.000577632,True,0.0,tie,True,10,10
+18_schwerdfeger2016,schwerdfeger2016,Parallel-machine workload balancing (NSSWD),min,large_4,0.000815354,alg_0eda683e68,frontieror/18_schwerdfeger2016/algorithms/alg_0eda683e68.py,0.000815354,True,0.0,tie,True,10,10
+18_schwerdfeger2016,schwerdfeger2016,Parallel-machine workload balancing (NSSWD),min,large_5,0.0016,alg_0eda683e68,frontieror/18_schwerdfeger2016/algorithms/alg_0eda683e68.py,0.0016,True,0.0,tie,True,10,10
+19_wangk2020,wangk2020,Flight planning under weather uncertainty,min,large_1,0.0,r1_O2_2.py,frontieror/19_wangk2020/algorithms/r1_O2_2.py,0.0,True,0.0,tie,True,3,5
+19_wangk2020,wangk2020,Flight planning under weather uncertainty,min,large_2,0.0,r1_O2_2.py,frontieror/19_wangk2020/algorithms/r1_O2_2.py,0.0,True,0.0,tie,True,4,5
+19_wangk2020,wangk2020,Flight planning under weather uncertainty,min,large_3,0.0,r0_O0_0.py,frontieror/19_wangk2020/algorithms/r0_O0_0.py,0.0,True,0.0,tie,True,5,5
+19_wangk2020,wangk2020,Flight planning under weather uncertainty,min,large_4,0.0,r0_O0_0.py,frontieror/19_wangk2020/algorithms/r0_O0_0.py,0.0,True,0.0,tie,True,4,5
+19_wangk2020,wangk2020,Flight planning under weather uncertainty,min,large_5,0.0,r1_O2_2.py,frontieror/19_wangk2020/algorithms/r1_O2_2.py,0.0,True,0.0,tie,True,2,5
+20_watermeyer2020,watermeyer2020,RCPSP/max with partial information,min,large_1,939.0,alg_f83b77d505,frontieror/20_watermeyer2020/algorithms/alg_f83b77d505.py,1106.0,True,-0.15099457504520797,better,True,2,10
+20_watermeyer2020,watermeyer2020,RCPSP/max with partial information,min,large_2,1025.0,alg_f83b77d505,frontieror/20_watermeyer2020/algorithms/alg_f83b77d505.py,1060.0,True,-0.0330188679245283,better,True,2,10
+20_watermeyer2020,watermeyer2020,RCPSP/max with partial information,min,large_3,782.0,alg_f83b77d505,frontieror/20_watermeyer2020/algorithms/alg_f83b77d505.py,1057.0,True,-0.26017029328287605,better,True,2,10
+20_watermeyer2020,watermeyer2020,RCPSP/max with partial information,min,large_4,1135.0,alg_f83b77d505,frontieror/20_watermeyer2020/algorithms/alg_f83b77d505.py,1190.0,True,-0.046218487394957986,better,True,2,10
+20_watermeyer2020,watermeyer2020,RCPSP/max with partial information,min,large_5,804.0,alg_f83b77d505,frontieror/20_watermeyer2020/algorithms/alg_f83b77d505.py,1071.0,True,-0.24929971988795518,better,True,4,10

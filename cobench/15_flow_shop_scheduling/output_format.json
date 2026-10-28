@@ -1,0 +1,17 @@
+{
+ "problem_type": "scheduling",
+ "decisions": [
+  {
+   "business": "The processing sequence of jobs (the job numbers processed in turn from position 0 to position n-1)",
+   "key": "perm",
+   "shape": "list[int]",
+   "example": [
+    2,
+    0,
+    3,
+    1
+   ],
+   "completeness": "Must contain the indices of all n jobs and be a permutation of 0 to n-1"
+  }
+ ]
+}

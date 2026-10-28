@@ -1,0 +1,12 @@
+{
+ "problem_type": "Vehicle Routing Problem with Divisible Delivery and Pickup (VRPDDP; delivery and pickup may be served by different vehicles, but each individual request cannot be split)",
+ "decisions": [
+  {
+   "key": "routes",
+   "business": "Depot-to-depot routes of all vehicles actually used; each outer element represents one vehicle, and the inner list gives the customers in visit order together with the delivery and pickup services completed at that visit; the depot start and end points are implicit and not written in the list.",
+   "shape": "list[list[{customer_id: int, serve_delivery: bool, serve_pickup: bool}]]; the outer length is the number of vehicles used, and each inner route has variable length and must be non-empty.",
+   "example": "[[{\"customer_id\":1,\"serve_delivery\":true,\"serve_pickup\":true},{\"customer_id\":3,\"serve_delivery\":true,\"serve_pickup\":false}],[{\"customer_id\":2,\"serve_delivery\":true,\"serve_pickup\":true},{\"customer_id\":3,\"serve_delivery\":false,\"serve_pickup\":true}]]",
+   "completeness": "Each customer_id must be in 1…n, each visit has at least one service flag set to true, and the same customer appears at most once in the same route; for each customer, serve_delivery=true appears exactly once across all routes, and serve_pickup=true also appears exactly once. If the same vehicle completes both requests of the same customer, both must be set to true in the same visit object; if they are completed by different vehicles, they appear in two separate routes. Each route leaves the depot loaded with all delivery goods of that route, and at each visit in sequence first unloads the delivery of that visit and then loads the pickup of that visit; the load on any travel leg must not exceed capacity, and the route finally returns to the depot. The solution is complete only when these conditions hold and there are no missing or extra visits."
+  }
+ ]
+}

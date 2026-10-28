@@ -1,0 +1,32 @@
+{
+ "schema_fields": [
+  "edges",
+  "num_vertices"
+ ],
+ "input_schema": "{\"num_vertices\": int, \"edges\": [[int, ...], ...]}",
+ "smoke_instance_example": {
+  "num_vertices": 5,
+  "edges": [
+   [
+    0,
+    1
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    1,
+    3
+   ]
+  ]
+ }
+}

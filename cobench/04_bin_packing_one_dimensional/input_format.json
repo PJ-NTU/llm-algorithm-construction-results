@@ -1,0 +1,19 @@
+{
+ "schema_fields": [
+  "capacity",
+  "n",
+  "weights"
+ ],
+ "input_schema": "{\"n\": int, \"capacity\": int, \"weights\": [int, ...]}",
+ "smoke_instance_example": {
+  "n": 5,
+  "capacity": 100,
+  "weights": [
+   20,
+   30,
+   40,
+   25,
+   45
+  ]
+ }
+}

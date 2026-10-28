@@ -1,0 +1,68 @@
+{
+ "schema_fields": [
+  "customers_demands",
+  "customers_x_coords",
+  "customers_y_coords",
+  "num_customers",
+  "num_plants",
+  "plants_capacities",
+  "plants_fixed_costs",
+  "plants_x_coords",
+  "plants_y_coords",
+  "shipping_costs",
+  "total_capacity",
+  "total_demand"
+ ],
+ "input_schema": "{\"num_customers\": int, \"num_plants\": int, \"customers_demands\": [int, ...], \"customers_x_coords\": [float, ...], \"customers_y_coords\": [float, ...], \"plants_capacities\": [float, ...], \"plants_fixed_costs\": [int, ...], \"plants_x_coords\": [float, ...], \"plants_y_coords\": [float, ...], \"shipping_costs\": [[float, ...], ...], \"total_demand\": int, \"total_capacity\": float}",
+ "smoke_instance_example": {
+  "num_customers": 3,
+  "num_plants": 2,
+  "customers_demands": [
+   10,
+   20,
+   30
+  ],
+  "customers_x_coords": [
+   8.444218515250482,
+   7.579544029403024,
+   4.20571580830845
+  ],
+  "customers_y_coords": [
+   2.5891675029296337,
+   5.112747213686085,
+   4.049341374504143
+  ],
+  "plants_capacities": [
+   90.0,
+   50.0
+  ],
+  "plants_fixed_costs": [
+   500,
+   400
+  ],
+  "plants_x_coords": [
+   7.837985890347726,
+   3.0331272607892745
+  ],
+  "plants_y_coords": [
+   4.765969541523559,
+   5.833820394550312
+  ],
+  "shipping_costs": [
+   [
+    22.6,
+    63.09
+   ],
+   [
+    4.32,
+    46.03
+   ],
+   [
+    37.02,
+    21.35
+   ]
+  ],
+  "total_demand": 60,
+  "total_capacity": 140.0
+ }
+}

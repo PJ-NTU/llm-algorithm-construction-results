@@ -1,0 +1,47 @@
+{
+ "problem_type": "multi_period_stochastic_production_routing_with_lost_sales",
+ "decisions": [
+  {
+   "key": "production_setup",
+   "business": "Per-period production setup decisions fixed before demand is realized; 1 means production is allowed in that period and the fixed setup cost is incurred, 0 means production in that period must be zero in all scenarios.",
+   "shape": "list[int], shape [H].",
+   "example": "[1, 0]",
+   "completeness": "Must contain exactly H elements, each of which must be 0 or 1; this array has no scenario axis and applies jointly to all demand scenarios."
+  },
+  {
+   "key": "vehicle_routes",
+   "business": "Route of each vehicle in each period, fixed before demand is realized; uses location node numbers, where 0 denotes the plant and 1,…,N denote customers. This field fully encodes the vehicle dispatch, customer visit, and travel arc decisions.",
+   "shape": "list[list[list[int]]], the outer two axes are [H][M], and the innermost level is a variable-length node sequence.",
+   "example": "[[[0, 1, 0], [0, 2, 0]], [[0], [0]]]",
+   "completeness": "One record must be provided for every period and every vehicle. An undispatched vehicle must be written as [0]; a dispatched route must be written as [0, customers…, 0], visit at least one customer, and contain no adjacent duplicate nodes or repeated customers. Within the same period, each customer appears in at most one route of one vehicle. Routes have no scenario axis, and transportation arcs are uniquely determined by pairs of adjacent nodes."
+  },
+  {
+   "key": "production_quantities",
+   "business": "Actual production quantity in each period under each demand scenario, which may be adjusted according to the demand history observed up to that period.",
+   "shape": "list[list[float]], shape [S][H].",
+   "example": "[[8.0, 0.0], [8.0, 2.0]]",
+   "completeness": "All S×H nonnegative quantities must be given; each quantity must not exceed production_capacity×production_setup[t]. If any two demand scenarios have the same demand prefix up to period t, their production quantities in t must be identical."
+  },
+  {
+   "key": "delivery_quantities",
+   "business": "Quantity of product delivered to each customer by each vehicle in each scenario and period.",
+   "shape": "list[list[list[list[float]]]], shape [S][H][M][N]; the last axis c corresponds to customer node c+1.",
+   "example": "[[[[3.0, 0.0], [0.0, 5.0]], [[0.0, 0.0], [0.0, 0.0]]], [[[3.0, 0.0], [0.0, 5.0]], [[0.0, 0.0], [0.0, 0.0]]]]",
+   "completeness": "All S×H×M×N nonnegative quantities must be given. A positive delivery may appear only when the corresponding vehicle route visits that customer; the total delivery of each vehicle in a period must not exceed vehicle_capacity; the total delivery to a customer must also respect the remaining inventory space and the upper bound given by the cumulative future demand of the corresponding scenario. Scenarios with the same demand history up to the current period must use the same current-period delivery array."
+  },
+  {
+   "key": "end_inventories",
+   "business": "Inventory level of the plant and all customers at the end of each period under each scenario, used for inventory balance and holding cost computation.",
+   "shape": "list[list[list[float]]], shape [S][H][N+1]; location axis 0 is the plant and 1,…,N are customers.",
+   "example": "[[[0.0, 1.0, 0.0], [0.0, 0.0, 0.0]], [[0.0, 1.0, 0.0], [2.0, 0.0, 0.0]]]",
+   "completeness": "All S×H×(N+1) nonnegative inventory levels must be given. Inventories must satisfy the period-by-period balance at the plant and customers, the plant capacity, and, for each customer, the constraint \"end-of-period inventory plus current-period demand does not exceed customer capacity\". Scenarios with the same demand history up to the current period must have the same current-period end-of-period inventory array."
+  },
+  {
+   "key": "unmet_demand_quantities",
+   "business": "Unmet demand of each customer in each period under each scenario, for which the penalty cost is incurred in that period; this quantity is not carried forward as a backlog to later periods.",
+   "shape": "list[list[list[float]]], shape [S][H][N]; the last axis c corresponds to customer node c+1.",
+   "example": "[[[0.0, 0.0], [1.0, 0.0]], [[0.0, 0.0], [0.0, 2.0]]]",
+   "completeness": "All S×H×N nonnegative quantities must be given; each entry must not exceed the corresponding demand_scenarios[s][t][c] and, together with deliveries and end-of-period inventories, must satisfy the customer inventory balance. Scenarios with the same demand history up to the current period must have the same current-period unmet demand array."
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+{"num_parts": "int", "sheet_width": "float", "sheet_height": "float", "part_widths": "[float, ...]", "part_heights": "[float, ...]", "part_values": "[float, ...]", "big_M": "float"}

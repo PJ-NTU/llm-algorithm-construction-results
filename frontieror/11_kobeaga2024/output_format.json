@@ -1,0 +1,19 @@
+{
+ "problem_type": "Single-route undirected Orienteering Problem with a distance budget, maximizing the collected visit score",
+ "decisions": [
+  {
+   "key": "visited",
+   "business": "Location visit decisions; visited[i]=1 means location i is visited by the route, visited[i]=0 means it is not visited.",
+   "shape": "binary integer list of [n_locations]",
+   "example": "[1, 1, 0, 1]",
+   "completeness": "Exactly one 0/1 value must be provided for each location; the value for depot_index must be 1, and visited must be fully consistent with the node degrees of selected_links: degree 2 when visited[i]=1, otherwise degree 0."
+  },
+  {
+   "key": "selected_links",
+   "business": "Undirected link selection decisions; selected_links[i][j]=1 means the direct link between locations i and j belongs to the route, otherwise 0.",
+   "shape": "symmetric binary integer matrix of [n_locations][n_locations]",
+   "example": "[[0,1,0,1],[1,0,0,1],[0,0,0,0],[1,1,0,0]]",
+   "completeness": "The complete n_locations×n_locations matrix must be provided; all entries are 0/1, the matrix is symmetric, and the diagonal is 0. The selected links must be consistent with visited and form exactly one connected cycle passing through depot_index, with no branches, dead ends, or separate subtours; counting each undirected link once with i<j, the total distance must not exceed distance_budget."
+  }
+ ]
+}
